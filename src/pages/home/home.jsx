@@ -1,9 +1,8 @@
-import "./Home.css"
-import LocationLink from "../../components/location_link/location_link"
-
+import "./Home.scss"
+import Header from "../../components/big_components/header/header"
 const Home = () => {
     return (
-        <LocationLink/>
+        <em>This is home</em>
     )
 }
 
