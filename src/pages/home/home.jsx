@@ -1,3 +1,4 @@
+import "./Home.css"
 import LocationLink from "../../components/location_link/location_link"
 
 const Home = () => {

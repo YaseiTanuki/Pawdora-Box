@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './location_link.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "./location_link.css"
 
 const LocationLink = () => {
     return (
