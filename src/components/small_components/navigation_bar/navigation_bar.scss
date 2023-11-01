@@ -1,0 +1,24 @@
+nav {
+    border: 1px solid black;
+    max-height: fit-content;
+    margin-top: 2rem;
+    ul {
+        list-style-type: none;
+        display: flex;
+        margin: 2px;
+        li {
+            .NavLink {
+                padding: 0.2rem 1rem 0.2rem 1rem;
+                margin: 0;
+                text-decoration: none;
+                font-family: "MinouDemoRegular";
+                font-size: 3rem;
+                color: black;
+            }
+
+            a:hover {
+                background-color: gray;
+            }
+        }
+    }
+}
