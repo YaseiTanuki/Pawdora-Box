@@ -1,12 +1,14 @@
 import './App.css'
+import { Routes, Route } from "react-router-dom"
 import "./utils/FontAwesome/font_awesome"
-import LocationLink from "./components/location_link/location_link.jsx"
+import Home from "./pages/home/home"
 
 function App() {
   return (
     <>
-      <LocationLink/>
-      <h1>Pawdora Box</h1>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+      </Routes>
     </>
   )
 }
