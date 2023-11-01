@@ -1,0 +1,23 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+
+
+    .logo {
+        min-width: 5rem;
+        min-height: 5rem;
+        background-image: url(../../../../public/img/logo.svg);
+        background-repeat: no-repeat;
+        background-size: 5rem auto;
+        padding-left: 5.5rem;
+        background-position: left;
+
+        font-family: "Meowcat";
+        font-size: 5rem;
+
+        text-decoration: none;
+        color: red;
+    }
+}
+
+
