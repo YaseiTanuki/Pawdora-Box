@@ -1,0 +1,19 @@
+@font-face {
+  font-family: Meowcat;
+  src: url(../src/assets/fonts/Meowcat.ttf);
+}
+
+@font-face {
+  font-family: MinouDemoRegular;
+  src: url(../src/assets/fonts/MinouDemoRegular.otf);
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1920px;
+}
+
+h1 {
+  color: red;
+}
