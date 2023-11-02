@@ -1,12 +1,15 @@
 import "./header.scss"
-import LocationLink from "../../small_components/location_link/location_link";
 import NavigationBar from "../../small_components/navigation_bar/navigation_bar";
 import Logo from "../../small_components/logo/logo";
+import LoginButton from "../../small_components/login/login_button/login_button";
 
 const Header = () => {
     return (
         <header>
-            <Logo/>
+            <section className="site-name">
+                <Logo/>
+                <LoginButton/>
+            </section>
             <NavigationBar/>
         </header>
     )
