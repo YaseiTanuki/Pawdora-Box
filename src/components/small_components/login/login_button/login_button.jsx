@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./login_button.css"
+import "./login_button.scss"
 
 const LoginButton = () => {
     return (
