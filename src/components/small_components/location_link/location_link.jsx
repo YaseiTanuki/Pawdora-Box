@@ -3,9 +3,7 @@ import "./location_link.scss"
 
 const LocationLink = () => {
     return (
-        <div className="full-width-border">
-            <a href=""><FontAwesomeIcon icon="location-dot" fixedWidth/>Shop Location</a>
-        </div>
+        <a className="location-link" href=""><FontAwesomeIcon icon="location-dot" fixedWidth/>Shop Location</a>
     )
 }
 
