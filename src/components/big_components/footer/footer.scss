@@ -6,7 +6,7 @@ footer {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     
-    section {
+    .footer-overall {
         grid-column: 1 / span 5;
         display: grid;
         grid-template-columns: subgrid;
@@ -18,5 +18,11 @@ footer {
         .footer-location-container {
             grid-column: 4 / span 2;
         }
+    }
+
+    .footer-info {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        border-right: 1px solid black;
     }
 }
