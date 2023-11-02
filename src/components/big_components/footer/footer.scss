@@ -1,0 +1,22 @@
+footer {
+    border-top: 1px solid black;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+    section {
+        grid-column: 1 / span 5;
+        display: grid;
+        grid-template-columns: subgrid;
+
+        .footer-logo-container {
+            grid-column: 1 / span 2;
+        }
+
+        .footer-location-container {
+            grid-column: 4 / span 2;
+        }
+    }
+}
