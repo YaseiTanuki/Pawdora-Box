@@ -1,0 +1,17 @@
+.finfo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    
+    .finfo-service {
+        grid-column: 1 / 2;
+    }
+
+    .finfo-shopping {
+        grid-column: 2 / 3;
+    }
+
+    .finfo-about-us {
+        grid-column: 3 / 4;
+    }
+}
