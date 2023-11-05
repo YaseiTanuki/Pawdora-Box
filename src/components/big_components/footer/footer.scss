@@ -10,23 +10,33 @@ footer {
         grid-column: 1 / span 5;
         display: grid;
         grid-template-columns: subgrid;
+        align-items: center;
 
         .footer-logo-container {
-            grid-column: 1 / span 2;
+            grid-column: 2 / 4;
         }
 
         .footer-location-container {
+            padding-left: 2rem;
             grid-column: 4 / 5;
-        }
-
-        .footer-social-media-container {
-            grid-column: 5 / 6;
         }
     }
 
     .footer-info {
-        grid-column: 1 / 4;
+        grid-column: 2 / 4;
         grid-row: 2 / 3;
         border-right: 1px solid black;
     }
+
+    .footer-support {
+        grid-column: 4 / 6;
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-columns: subgrid;
+
+        .footer-social-media-container {
+            grid-column: 1 / 2;
+        }   
+    }
+
 }

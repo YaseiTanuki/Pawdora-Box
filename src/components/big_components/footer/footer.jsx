@@ -14,13 +14,16 @@ const Footer = () => {
                 <div className="footer-location-container">
                     <LocationLink/>
                 </div>
-                <div className="footer-social-media-container">
-                    <SocialMedia/>
-                </div>
             </section>
 
             <section className="footer-info">
                 <FooterInfo/>
+            </section>
+
+            <section className="footer-support">
+                <div className="footer-social-media-container">
+                    <SocialMedia/>
+                </div>
             </section>
         </footer>
     )
