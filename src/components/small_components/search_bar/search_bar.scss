@@ -1,0 +1,21 @@
+.search-bar {
+    display: flex;
+
+    input {
+        min-width: 30rem;
+        width: 40vw;
+        border-radius: 1rem;
+        min-height: 2rem;
+    }
+
+    button {
+        background-color: white;
+        width: 2rem;
+        height: 2rem;
+        border: 0;
+        background-image: url("../../../assets/img/search.png");
+        background-size: 2rem 2rem;
+        margin-left: -3rem;
+        margin-top: 4px;
+    }
+}
