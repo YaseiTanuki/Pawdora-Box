@@ -2,6 +2,7 @@ import "./footer.scss"
 import Logo from "../../small_components/logo/logo"
 import LocationLink from "../../small_components/location_link/location_link"
 import FooterInfo from "../../small_components/footer_info/footer_info"
+import SocialMedia from "../../small_components/social_media/social_media"
 
 const Footer = () => {
     return (
@@ -12,6 +13,9 @@ const Footer = () => {
                 </div>
                 <div className="footer-location-container">
                     <LocationLink/>
+                </div>
+                <div className="footer-social-media-container">
+                    <SocialMedia/>
                 </div>
             </section>
 

@@ -16,7 +16,11 @@ footer {
         }
 
         .footer-location-container {
-            grid-column: 4 / span 2;
+            grid-column: 4 / 5;
+        }
+
+        .footer-social-media-container {
+            grid-column: 5 / 6;
         }
     }
 
