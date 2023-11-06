@@ -5,6 +5,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    background-color: white;
     
     .footer-overall {
         grid-column: 1 / span 5;
