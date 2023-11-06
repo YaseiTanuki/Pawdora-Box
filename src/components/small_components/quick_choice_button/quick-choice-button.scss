@@ -1,0 +1,9 @@
+.quick-choice-button {
+    border: 1px solid black;
+    background-color: wheat;
+    padding: 1rem;
+
+    &:hover {
+        background-color: yellow;
+    }
+}
