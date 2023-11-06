@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Banner image
+src/assets/img/banner.jpg
+src/assets/img/banner2.jpg
