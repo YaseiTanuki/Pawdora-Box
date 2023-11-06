@@ -1,8 +1,9 @@
 import "./Home.scss"
-import Header from "../../components/big_components/header/header"
+import Banner from "../../components/small_components/banner/banner"
+
 const Home = () => {
     return (
-        <em>This is home</em>
+        <Banner/>
     )
 }
 
