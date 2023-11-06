@@ -1,0 +1,20 @@
+.home {
+    padding-bottom: 1rem;
+    .banner-container {
+        border-bottom: 1px solid black;
+        padding-bottom: 1rem;
+    }
+
+    .main-content {
+        margin-top: 2rem;
+        .quick-choice {
+            .quick-choice-list {
+                display: flex;
+                list-style: none;
+                li {
+                    margin: 0 1rem 0 1rem;
+                }
+            }
+        }
+    }
+}
