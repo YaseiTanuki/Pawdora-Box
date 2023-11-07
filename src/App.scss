@@ -8,6 +8,11 @@
   src: url(../src/assets/fonts/MinouDemoRegular.otf);
 }
 
+@font-face {
+  font-family: Aileron;
+  src: url(../src/assets/fonts/Aileron.otf);
+}
+
 body {
   padding: 1rem 2rem 1rem 2rem;
   margin: 0 auto;
@@ -20,4 +25,8 @@ body {
 
 h1 {
   color: red;
+}
+
+a {
+  color: black;
 }
