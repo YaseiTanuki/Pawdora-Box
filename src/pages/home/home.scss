@@ -7,12 +7,26 @@
 
     .main-content {
         margin-top: 2rem;
+
         .quick-choice {
+            margin-bottom: 2rem;
             .quick-choice-list {
                 display: flex;
                 list-style: none;
                 li {
                     margin: 0 1rem 0 1rem;
+                }
+            }
+        }
+
+        .new-product {
+            .product-list {
+                list-style: none;
+                display: flex;
+                gap: 6rem;
+                flex-wrap: wrap;
+                li {
+                    width: 200px;
                 }
             }
         }

@@ -1,6 +1,7 @@
 import "./Home.scss"
 import Banner from "../../components/small_components/banner/banner"
 import QuickChoiceButton from "../../components/small_components/quick_choice_button/quick_choice_button"
+import ProductCard from "../../components/small_components/product_card/product_card"
 
 const Home = () => {
     return (
@@ -17,6 +18,17 @@ const Home = () => {
                         <li><QuickChoiceButton name="Cat Toy"/></li>
                         <li><QuickChoiceButton name="Pet Service"/></li>
                         <li><QuickChoiceButton name="Medical"/></li>
+                    </ul>
+                </article>
+                <article className="new-product">
+                    <ul className="product-list">
+                        <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                        <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                        <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                        <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                        <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                        <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                        <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
                     </ul>
                 </article>
             </section>
