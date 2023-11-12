@@ -1,11 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./login_button.scss"
+import Starter from "../../starter/starter";
+import Popup from "reactjs-popup";
 
 const LoginButton = () => {
     return (
-        <div className="login-button">
-            <FontAwesomeIcon icon="right-to-bracket"/>
-        </div>
+        <Popup trigger={<button className="login-button"><FontAwesomeIcon icon="right-to-bracket"/></button>}>
+            <Starter/>
+        </Popup>
     )
 }
 

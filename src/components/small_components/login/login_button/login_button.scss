@@ -1,4 +1,9 @@
 .login-button {
-    display: block;
-    font-size: 3rem;
+        border: 1px solid white;
+        background-color: inherit;
+        font-size: 3rem;
+
+        &:hover {
+            border: 1px solid aquamarine;
+        }
 }
