@@ -1,23 +1,17 @@
 import "./starter.scss"
-import { useNavigate } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const Starter = () => {
-
-    const navigate = useNavigate()
-
-    const navigateToLoginPage = () => {
-        navigate("/login")
-    }
 
     return (
         <article className="starter">
             <div className="option-login">
                 <h4>Welcome!</h4>
-                <button onClick={navigateToLoginPage}>login</button>
+                <NavLink to="/login">Login</NavLink>
             </div>
             <div className="option-register">
                 <h4>Do not have account?</h4>
-                <button>Register</button>  
+                <NavLink>Register</NavLink>
             </div>
         </article>
     )
