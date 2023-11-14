@@ -4,7 +4,7 @@ import Logo from "../../small_components/logo/logo";
 import LoginButton from "../../small_components/login/login_button/login_button";
 import SearchBar from "../../small_components/search_bar/search_bar";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
             <section className="site-name">
@@ -12,7 +12,9 @@ const Header = () => {
                 <SearchBar/>
                 <LoginButton/>
             </section>
-            <NavigationBar/>
+            { props.showNav ? 
+            <NavigationBar/> : <></>
+            }
         </header>
     )
 }
