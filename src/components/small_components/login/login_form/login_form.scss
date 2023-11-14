@@ -1,12 +1,23 @@
 .login-window {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    max-width: 50vw;
+    min-height: 50vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     form {
-
+        width: 100%;
         input {
             border-width: 0 0 1px 0;
+            width: 100%;
             margin: 0.5rem 0 2rem 0;
+
+            &:focus {
+                outline: none;
+            }
         }
     }
 }
