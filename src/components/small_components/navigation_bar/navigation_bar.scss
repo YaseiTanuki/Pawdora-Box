@@ -1,12 +1,14 @@
 nav {
-    border: 1px solid black;
     max-height: fit-content;
     margin-top: 2rem;
     ul {
         list-style-type: none;
         display: flex;
         margin: 2px;
+        gap: 2rem;
+        justify-content: space-between;
         li {
+            min-width: 14rem;
             .NavLink {
                 padding: 0.2rem 1rem 0.2rem 1rem;
                 margin: 0;
@@ -20,5 +22,20 @@ nav {
                 background-color: gray;
             }
         }
+    }
+}
+
+.cat-sub-menu {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    min-width: 10rem;
+    font-size: 1.5rem;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
     }
 }
