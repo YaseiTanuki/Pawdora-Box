@@ -1,13 +1,20 @@
 .home {
     padding-bottom: 1rem;
+    grid-row: 2 / 3;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: subgrid;
     .banner-container {
         border-bottom: 1px solid black;
         padding-bottom: 1rem;
+        grid-column: 1 / 13;
+        grid-row: 1 / 2;
     }
 
     .main-content {
         margin-top: 2rem;
-
+        grid-column: 3 / 11;
+        grid-row: 2 / 3;
         .quick-choice {
             margin-bottom: 2rem;
             .quick-choice-list {
@@ -23,7 +30,7 @@
             .product-list {
                 list-style: none;
                 display: flex;
-                gap: 6rem;
+                gap: 1rem;
                 flex-wrap: wrap;
                 li {
                     width: 200px;

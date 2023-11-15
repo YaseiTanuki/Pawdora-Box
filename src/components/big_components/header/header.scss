@@ -1,12 +1,18 @@
 header {
-    padding: 1rem;
     border-bottom: 1px solid black;
     margin-bottom: 1rem;
-    background-color: white;
-    
-    .site-name {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    background-color: #2accc8;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    .header-content {
+        grid-column: 3 / 11;
+        .site-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }   
     }
 }

@@ -1,8 +1,15 @@
 .login {
     display: flex;
     justify-content: center;
+    grid-row: 2 / 3;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: subgrid;
+    justify-content: center;
 
     .login-form-container {
-        width: 30rem;
+        grid-column: 5 / 9;
+        width: 4fr;
+        margin-top: 5rem;
     }
 }

@@ -7,14 +7,16 @@ import SearchBar from "../../small_components/search_bar/search_bar";
 const Header = (props) => {
     return (
         <header>
-            <section className="site-name">
-                <Logo/>
-                <SearchBar/>
-                <LoginButton/>
+            <section className="header-content">
+                <section className="site-name">
+                    <Logo/>
+                    <SearchBar/>
+                    <LoginButton/>
+                </section>
+                { props.showNav ? 
+                <NavigationBar/> : <></>
+                }
             </section>
-            { props.showNav ? 
-            <NavigationBar/> : <></>
-            }
         </header>
     )
 }

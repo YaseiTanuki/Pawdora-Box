@@ -1,7 +1,7 @@
 .login-window {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #2accc8;
     justify-content: flex-start;
     gap: 3rem;
     align-items: center;
@@ -24,7 +24,7 @@
         input {
             border-width: 0 0 1px 0;
             width: 80%;
-
+            background-color: #2accc8;
             &:focus {
                 outline: none;
             }
