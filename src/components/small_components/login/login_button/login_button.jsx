@@ -5,7 +5,7 @@ import Popup from "reactjs-popup";
 
 const LoginButton = () => {
     return (
-        <Popup trigger={<button className="login-button"><FontAwesomeIcon icon="right-to-bracket"/></button>}>
+        <Popup trigger={<button className="login-button"><FontAwesomeIcon icon="user"/></button>}>
             <Starter/>
         </Popup>
     )

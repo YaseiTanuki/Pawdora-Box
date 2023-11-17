@@ -16,9 +16,9 @@
 html {
   min-width: 1000px;
   max-width: 1920px;
-  background-image: url(./assets/img/background.svg);
-  background-size: 500px 500px;
-  background-repeat:repeat;
+  // background-image: url(./assets/img/background.svg);
+  // background-size: 500px 500px;
+  // background-repeat:repeat;
 }
 
 body {
@@ -28,6 +28,8 @@ body {
 #root {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  --brand-color:#f2e1df;
+  background-color: var(--brand-color);
 }
 
 h1 {

@@ -1,4 +1,4 @@
-import { faLocationDot, faRightToBracket, faCaretDown } from "@fortawesome/free-solid-svg-icons"
+import { faLocationDot, faRightToBracket, faCaretDown, faUser } from "@fortawesome/free-solid-svg-icons"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faFacebook, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
 
@@ -7,4 +7,5 @@ library.add(faLocationDot,
             faFacebook,
             faInstagram,
             faYoutube,
-            faCaretDown)
+            faCaretDown,
+            faUser)

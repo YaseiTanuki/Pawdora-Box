@@ -33,6 +33,9 @@ const Home = () => {
                             <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
                             <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
                             <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
                         </ul>
                     </article>
                 </section>
