@@ -24,14 +24,14 @@ const NavigationBar = () => {
             <ul>
                 <li><NavLink className="NavLink" to="/">HOME</NavLink></li>
                 <li>
-                    <Popup trigger={<NavLink className="NavLink" to="#">CAT<FontAwesomeIcon icon="caret-down"/></NavLink>} >
+                    <Popup trigger={<NavLink className="NavLink" to="#">CAT <FontAwesomeIcon icon="caret-down"/></NavLink>} >
                         <CatSubMenu/>
                     </Popup>
                 </li>
-                <li><NavLink className="NavLink" to="#">DOG<FontAwesomeIcon icon="caret-down"/></NavLink></li>
-                <li><NavLink className="NavLink" to="#">HAMSTER<FontAwesomeIcon icon="caret-down"/></NavLink></li>
-                <li><NavLink className="NavLink" to="#">RABBIT<FontAwesomeIcon icon="caret-down"/></NavLink></li>
-                <li><NavLink className="NavLink" to="#">BIRD<FontAwesomeIcon icon="caret-down"/></NavLink></li>
+                <li><NavLink className="NavLink" to="#">DOG <FontAwesomeIcon icon="caret-down"/></NavLink></li>
+                <li><NavLink className="NavLink" to="#">HAMSTER <FontAwesomeIcon icon="caret-down"/></NavLink></li>
+                <li><NavLink className="NavLink" to="#">RABBIT <FontAwesomeIcon icon="caret-down"/></NavLink></li>
+                <li><NavLink className="NavLink" to="#">BIRD <FontAwesomeIcon icon="caret-down"/></NavLink></li>
             </ul>
         </nav>
     )
