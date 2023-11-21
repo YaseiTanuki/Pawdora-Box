@@ -7,6 +7,7 @@
     background-image: url(../../assets/img/background.svg);
     background-size: 500px;
     background-repeat: repeat;
+
     .banner-container {
         border-bottom: 1px solid black;
         padding-bottom: 1rem;
@@ -21,12 +22,14 @@
         grid-row: 2 / 3;
         display: grid;
         grid-template-columns: subgrid;
+
         .quick-choice {
             margin-bottom: 2rem;
             grid-column: 1 / 13;
             display: flex;
             justify-content: center;
             padding: 0;
+
             .quick-choice-list {
                 display: flex;
                 list-style: none;
@@ -35,6 +38,7 @@
                 margin: 0;
                 gap: 5vw;
                 padding: 0;
+
                 li {
                     margin: 0;
                     min-width: 100px;
@@ -45,6 +49,7 @@
         .new-product {
             grid-column: 1 / 13;
             grid-row: 2 / 3;
+
             .product-list {
                 display: flex;
                 justify-content: center;
@@ -53,9 +58,32 @@
                 display: flex;
                 gap: 5rem;
                 flex-wrap: wrap;
+
                 li {
                     width: 200px;
+
+                    .product-card {
+                        h4 {
+                            font-size: 20px;
+                        }
+
+                        p {
+                            display: none; // Ẩn mô tả ban đầu
+                        }
+                    }
                 }
+            }
+
+            button {
+                display: block;
+                margin: 1rem auto;
+                background-color: var(--brand-color);
+                color: rgb(71, 68, 68);
+                padding: 0.5rem 1rem;
+                border: none;
+                cursor: pointer;
+                border-radius: 10px;
+                //font-family: ;
             }
         }
     }

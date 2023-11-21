@@ -1,7 +1,6 @@
 import "./navigation_bar.scss"
 import { NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useState } from "react"
 import Popup from "reactjs-popup"
 
 const NavigationBar = () => {

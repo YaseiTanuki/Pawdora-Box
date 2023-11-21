@@ -1,4 +1,18 @@
 .banner {
     display: flex;
-    justify-content: center;
+    justify-content: right;
+
+    // thuộc tính liên quan đến animation
+    position: relative;
+    overflow: hidden;
+    
+    // Thiết lập keyframes cho chuyển động
+    @keyframes rotate {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+    
+    // Thiết lập animation cho vòng lặp
+    animation: rotate 7s linear infinite;
 }
+

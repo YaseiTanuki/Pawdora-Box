@@ -1,22 +1,21 @@
 .login-window {
     display: flex;
     flex-direction: column;
-    background-color: #2accc8;
+    background-color: #ffffff;
     justify-content: flex-start;
-    gap: 3rem;
     align-items: center;
     max-width: 50vw;
-    min-height: 50vh;
+   
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 1rem;
-
+   
     h1 {
         margin-top: 15%;
     }
 
     form {
+        margin-top: 2.5rem;
         width: 100%;
-
         label, input {
             margin: 1rem;
         }
@@ -24,10 +23,40 @@
         input {
             border-width: 0 0 1px 0;
             width: 80%;
-            background-color: #2accc8;
+            background-color: #fbfbfb;
             &:focus {
                 outline: none;
             }
         }
     }
+    button {
+        padding: 0.5rem 1rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-block-end: 2.5rem;
+    }
+
+    button:hover {
+        background-color: #45a049; 
+    }
+}
+
+.logo1 {
+    background-image: url(/img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 2rem auto;
+    padding-left: 2.5rem;
+    background-position: left;
+
+    font-family: "Aileron";
+    font-size: 2rem;
+
+    color: red;
+}
+
+.header_login{
+    text-align: center;
 }

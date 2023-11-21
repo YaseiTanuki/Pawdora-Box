@@ -4,8 +4,41 @@ import QuickChoiceButton from "../../components/small_components/quick_choice_bu
 import ProductCard from "../../components/small_components/product_card/product_card"
 import Header from "../../components/big_components/header/header"
 import Footer from "../../components/big_components/footer/footer"
+import React, { useState } from 'react'
 
 const Home = () => {
+  
+    const [displayedProducts, setDisplayedProducts] = useState(10)
+    const products = [
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
+    ]
+    const showMoreProducts = () => {
+        // Tăng số lượng sản phẩm hiển thị khi nhấn "Xem thêm"
+        setDisplayedProducts(displayedProducts + 8)
+    }
+
+    const showLessProducts = () => {
+        // Giảm số lượng sản phẩm hiển thị khi nhấn "Thu gọn"
+        setDisplayedProducts(10) // Quay lại số lượng sản phẩm hiển thị ban đầu
+    }
+
     return (
         <>
             <Header showNav={true}/>
@@ -26,18 +59,18 @@ const Home = () => {
                     </article>
                     <article className="new-product">
                         <ul className="product-list">
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
-                            <li><ProductCard img="public/img/home-product/cat1.webp" name="This is product item" price="200"/></li>
+                            {products.slice(0, displayedProducts).map((product, index) => (
+                                <li key={index}>
+                                    <ProductCard img={product.img} name={product.name} price={product.price} description={product.description} />
+                                </li>
+                            ))}
                         </ul>
-                    </article>
+                        {displayedProducts < products.length ? (
+                            <button onClick={showMoreProducts}>Xem thêm</button>
+                        ) : (
+                            <button onClick={showLessProducts}>Thu gọn</button>
+                        )}
+                        </article>
                 </section>
             </main>
             <Footer/>
