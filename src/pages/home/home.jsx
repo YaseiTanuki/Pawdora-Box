@@ -39,6 +39,8 @@ const Home = () => {
         setDisplayedProducts(10) // Quay lại số lượng sản phẩm hiển thị ban đầu
     }
 
+
+
     return (
         <>
             <Header showNav={true}/>
@@ -70,7 +72,10 @@ const Home = () => {
                         ) : (
                             <button onClick={showLessProducts}>Thu gọn</button>
                         )}
-                        </article>
+                    </article>
+                    <article className="new-article">
+
+                    </article>
                 </section>
             </main>
             <Footer/>

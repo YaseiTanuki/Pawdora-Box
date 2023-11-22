@@ -1,22 +1,65 @@
 import "./login_form.scss"
 import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+
 
 const LoginForm = () => {
+    const [showPassword, setShowPassword] = useState(false)
+    const [rememberAccount, setRememberAccount] = useState(false)
+
+    const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword)
+    }
+    const handleForgotPassword = () => {
+        console.log("Forgot Password clicked");
+    }
+    const handleRememberAccount = () => {
+        setRememberAccount(!rememberAccount);
+    }
+
     return (
         <article className="login-window">
-            <div className="header_login">
-                <p className="logo1">Pawdora Box</p>
+            <div className="header-login">
+                <p className="logo">Pawdora Box</p>
                 <h1>LOGIN</h1>
             </div>
             <form action="">
                 <label htmlFor="user-name">User name:</label><br />
                 <input type="text" /><br />
                 <label htmlFor="password">Password:</label><br />
-                <input type="text" />
+                <div className="password-input-container">
+                    <input type={showPassword ? "text" : "password"} />
+                    <FontAwesomeIcon
+                        icon={showPassword ? faEye : faEyeSlash}
+                        onClick={togglePasswordVisibility}
+                        className="eye-icon"/>
+                </div>
+                <div className="options-row">
+                    <div className="remember-account">
+                        <input
+                            type="checkbox"
+                            id="rememberAccount"
+                            checked={rememberAccount}
+                            onChange={handleRememberAccount}/>
+                        <label htmlFor="rememberAccount">Nhớ tài khoản</label>
+                    </div>
+                    <div className="forgot-password">
+                        <a href="#" onClick={handleForgotPassword}>
+                            Quên mật khẩu?
+                        </a>
+                    </div> 
+                </div>  
             </form>
             <NavLink to="/">
                     <button type="submit">Login</button>
             </NavLink>
+            <p className="notaccount">Bạn chưa có tài khoản? &nbsp;
+                <NavLink to="/register" className="NavLink">
+                    <span> Đăng ký</span>
+                </NavLink>
+            </p>
         </article>
     )
 }

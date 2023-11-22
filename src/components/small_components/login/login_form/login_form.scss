@@ -8,10 +8,24 @@
    
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 1rem;
-   
-    h1 {
-        margin-top: 15%;
-    }
+   .header-login{
+        text-align: center;
+        h1 {
+            margin-top: 15%;
+        }
+        .logo {
+            background-image: url(/img/logo.svg);
+            background-repeat: no-repeat;
+            background-size: 2rem auto;
+            padding-left: 2.5rem;
+            background-position: left;
+        
+            font-family: "Aileron";
+            font-size: 2rem;
+        
+            color: red;
+        }
+   }
 
     form {
         margin-top: 2.5rem;
@@ -28,6 +42,37 @@
                 outline: none;
             }
         }
+        .options-row {
+            justify-content: space-between; 
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            column-gap: 10px;
+            
+            .remember-account{
+                display: flex;
+                align-items: center;
+        
+                input {
+                    min-width: 50px;
+                    margin-left: -70px;
+                }
+                label{
+                    min-width:100px;
+                    margin-left: -100px;
+                }
+            }
+            .forgot-password{
+                text-align: right;
+                margin-right: 50px;
+                
+                a{
+                    text-decoration:none;
+                    color:#45a049;
+                }
+               
+            }
+        }
     }
     button {
         padding: 0.5rem 1rem;
@@ -36,27 +81,23 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        margin-block-end: 2.5rem;
+        margin-block-end: 1rem;
+        margin-top: 1rem;
     }
 
     button:hover {
         background-color: #45a049; 
     }
+
+    p{
+        white-space: nowrap;
+        display: flex; 
+        align-items: center;
+        .NavLink {
+            text-decoration:none;
+            color:#45a049;
+        }
+    }
+    
 }
 
-.logo1 {
-    background-image: url(/img/logo.svg);
-    background-repeat: no-repeat;
-    background-size: 2rem auto;
-    padding-left: 2.5rem;
-    background-position: left;
-
-    font-family: "Aileron";
-    font-size: 2rem;
-
-    color: red;
-}
-
-.header_login{
-    text-align: center;
-}
