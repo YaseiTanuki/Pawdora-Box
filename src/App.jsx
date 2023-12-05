@@ -5,6 +5,7 @@ import "./utils/FontAwesome/font_awesome"
 import Home from "./pages/home/home"
 import CatPage from "./pages/cat_page/cat_page"
 import LoginPage from "./pages/login/login"
+import RegisterPage from "./pages/register/register"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/cat" element={<CatPage/>}/>
         <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
       </Routes>
     </>
   )

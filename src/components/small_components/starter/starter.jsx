@@ -11,7 +11,7 @@ const Starter = () => {
             </div>
             <div className="option-register">
                 <h4>Do not have account?</h4>
-                <NavLink>Register</NavLink>
+                <NavLink to="/register">Register</NavLink>
             </div>
         </article>
     )

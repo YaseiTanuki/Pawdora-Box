@@ -9,10 +9,12 @@ header {
     padding-top: 2rem;
     .header-content {
         grid-column: 3 / 11;
+        min-width: 950px;
         .site-name {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
         }   
     }
 }
