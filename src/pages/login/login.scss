@@ -1,14 +1,25 @@
-.login {
 
-    grid-row: 2 / 3;
-    grid-column: 1 / 13;
+
+
+.login-page{
     display: grid;
     grid-template-columns: subgrid;
-
-    .login-form-container {
-        grid-column: 5 / 9;
-        width: 4fr;
-        margin-top: 5rem;
+    grid-column: 1/13;
+    header{
+        padding-bottom: 1rem;
+    }
+    .login {
     
+        grid-row: 2 / 3;
+        grid-column: 1 / 13;
+        display: grid;
+        grid-template-columns: subgrid;
+    
+        .login-form-container {
+            grid-column: 5 / 9;
+            width: 4fr;
+            margin-top: 5rem;
+        
+        }
     }
 }

@@ -22,13 +22,13 @@ const LoginForm = () => {
     return (
         <article className="login-window">
             <div className="header-login">
-                <p className="logo">Pawdora Box</p>
-                <h1>LOGIN</h1>
+                <p className="Logo">Pawdora Box</p>
+                <h1>ĐĂNG NHẬP</h1>
             </div>
             <form action="">
-                <label htmlFor="user-name">User name:</label><br />
+                <label htmlFor="user-name">Họ và tên:</label><br />
                 <input type="text" /><br />
-                <label htmlFor="password">Password:</label><br />
+                <label htmlFor="password">Mật khẩu:</label><br />
                 <div className="password-input-container">
                     <input type={showPassword ? "text" : "password"} />
                     <FontAwesomeIcon
@@ -53,7 +53,7 @@ const LoginForm = () => {
                 </div>  
             </form>
             <NavLink to="/">
-                    <button type="submit">Login</button>
+                    <button type="submit">Đăng nhập</button>
             </NavLink>
             <p className="notaccount">Bạn chưa có tài khoản? &nbsp;
                 <NavLink to="/register" className="NavLink">

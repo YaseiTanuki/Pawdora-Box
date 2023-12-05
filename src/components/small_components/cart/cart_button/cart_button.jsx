@@ -1,14 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./cart_button.scss"
-import Popup from "reactjs-popup"
+import React from "react"
+import { NavLink } from "react-router-dom"
 
 
 const CartButton = () => {
     return (
-        <Popup trigger={<button className="cart-button"><FontAwesomeIcon icon="cart-shopping"/></button>}>
-            
-        </Popup>
-       
+        <NavLink to="/cart" className="cart-button" activeClassName="active">
+            <FontAwesomeIcon icon="cart-shopping" />
+        </NavLink>
     )
 }
 

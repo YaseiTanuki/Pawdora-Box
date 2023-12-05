@@ -14,8 +14,8 @@ const Register = () => {
     return (
         <article className="register-window">
             <div className="header_register">
-                <p className="logo">Pawdora Box</p>
-                <h1>Đăng ký</h1>
+                <p className="Logo">Pawdora Box</p>
+                <h1>ĐĂNG KÝ</h1>
             </div>
             <form action="">
                 <label htmlFor="user-name">Họ và tên:</label><br />

@@ -12,7 +12,7 @@
     .header_register{
         text-align: center;
 
-        .logo {
+        .Logo {
             background-image: url(/img/logo.svg);
             background-repeat: no-repeat;
             background-size: 2rem auto;
@@ -36,8 +36,10 @@
     form {
         margin-top: 2.5rem;
         width: 100%;
+        margin-left: 50px;
         label, input {
-            margin: 1rem;
+        margin: 1rem;
+        
         }
 
         input {
@@ -48,13 +50,26 @@
                 outline: none;
             }
         }
+
+        .password-input-container{
+            position: relative;
+
+            .eye-icon {
+                position: absolute;
+                top: 50%;
+                right: 5rem;
+                transform: translate(0, -50%);
+                cursor: pointer;
+            }
+        }
     }
+
     button {
         padding: 0.5rem 1rem;
         background-color: #4CAF50;
         color: white;
         border: none;
-        border-radius: 4px;
+        border-radius: 10px;
         cursor: pointer;
         margin-block-end: 1rem;
     }

@@ -73,9 +73,7 @@ const Home = () => {
                             <button onClick={showLessProducts}>Thu gọn</button>
                         )}
                     </article>
-                    <article className="new-article">
-
-                    </article>
+                
                 </section>
             </main>
             <Footer/>
