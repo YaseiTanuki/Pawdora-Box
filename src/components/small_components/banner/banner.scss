@@ -1,19 +1,27 @@
 .banner {
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    grid-column: 1 / 13;
 
     // thuộc tính liên quan đến animation
-    position: relative;
-    overflow: hidden;
+    // position: relative;
+    // overflow: hidden;
     
-    // Thiết lập keyframes cho chuyển động
-    @keyframes rotate {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-100%); }
+    // // Thiết lập keyframes cho chuyển động
+    // @keyframes rotate {
+    //     0% { transform: translateX(0%); }
+    //     100% { transform: translateX(-100%); }
+    // }
+    
+    //     margin-right: -626px;
+    // // Thiết lập animation cho vòng lặp
+    // animation: rotate 7s linear infinite;
+    a {
+        max-width: fit-content;
+        img {
+            max-height: 40vh;
+            height: auto;
+        }
     }
-    
-        margin-right: -626px;
-    // Thiết lập animation cho vòng lặp
-    animation: rotate 7s linear infinite;
 }
 

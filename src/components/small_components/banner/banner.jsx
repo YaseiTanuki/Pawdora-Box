@@ -7,7 +7,6 @@ const Banner = () => {
     return(
         <section className="banner">
             <a href=""><img src={BannerImage} alt="Banner image"/></a>
-
         </section>
     )
 }
