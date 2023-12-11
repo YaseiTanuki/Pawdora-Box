@@ -1,9 +1,9 @@
 .quick-choice-button {
-    
-    background-color: var(--brand-color);
+    background-color: white;
     padding: 0.7rem;
     border-radius: 25px;
-    min-width: 20rem;
+    width: 15rem;
+    height: 6rem;
     &:hover {
         background-color: #2acc8e;
     }

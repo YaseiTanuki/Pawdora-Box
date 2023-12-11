@@ -51,12 +51,10 @@ const Home = () => {
                 <section className="main-content">
                     <article className="quick-choice">
                         <ul className="quick-choice-list">
-                            <li><QuickChoiceButton name="Dog Food"/></li>
-                            <li><QuickChoiceButton name="Cat Food"/></li>
-                            <li><QuickChoiceButton name="Dog Toy"/></li>
-                            <li><QuickChoiceButton name="Cat Toy"/></li>
-                            <li><QuickChoiceButton name="Pet Service"/></li>
-                            <li><QuickChoiceButton name="Medical"/></li>
+                            <li><QuickChoiceButton name="Thức ăn cho chó"/></li>
+                            <li><QuickChoiceButton name="Thức ăn cho mèo"/></li>
+                            <li><QuickChoiceButton name="Trừ bọ chét. ve"/></li>
+                            <li><QuickChoiceButton name="Đồ chơi"/></li>
                         </ul>
                     </article>
                     <article className="new-product">
@@ -73,7 +71,6 @@ const Home = () => {
                             <button onClick={showLessProducts}>Thu gọn</button>
                         )}
                     </article>
-                
                 </section>
             </main>
             <Footer/>

@@ -24,20 +24,21 @@
         grid-template-columns: subgrid;
 
         .quick-choice {
-            margin-bottom: 2rem;
+            grid-row: 1 / 2;
             grid-column: 1 / 13;
             display: flex;
             justify-content: center;
             padding: 0;
+            min-height: 10rem;
 
             .quick-choice-list {
                 display: flex;
                 list-style: none;
-                align-items: center;
                 height: 50px;
                 margin: 0;
                 gap: 5vw;
                 padding: 0;
+                min-height: fit-content;
 
                 li {
                     margin: 0;
@@ -55,13 +56,11 @@
                 justify-content: center;
                 padding: 0;
                 list-style: none;
-                display: flex;
                 gap: 5rem;
                 flex-wrap: wrap;
 
                 li {
                     width: 200px;
-
                     .product-card {
                         h4 {
                             font-size: 20px;
@@ -87,14 +86,14 @@
             }
         }
 
-        .new-article{
-            margin-bottom: 2rem;
-            grid-column: 1 / 13;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            border-bottom: 1px solid rgb(0, 0, 0)0e;
-        }
+        // .new-article{
+        //     margin-bottom: 2rem;
+        //     grid-column: 1 / 13;
+        //     display: flex;
+        //     justify-content: center;
+        //     padding: 0;
+        //     border-bottom: 1px solid rgb(0, 0, 0)0e;
+        // }
         
     }
 }

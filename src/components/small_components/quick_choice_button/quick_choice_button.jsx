@@ -2,9 +2,9 @@ import "./quick-choice-button.scss"
 
 const QuickChoiceButton = (props) => {
     return (
-        <a className="quick-choice-button">
+        <button className="quick-choice-button">
             {props.name}
-        </a>
+        </button>
     )
 }
 
