@@ -4,10 +4,14 @@ import Logo from "../../small_components/logo/logo"
 import LoginButton from "../../small_components/login/login_button/login_button"
 import SearchBar from "../../small_components/search_bar/search_bar"
 import CartButton from "../../small_components/cart/cart_button/cart_button"
+import LocationLink from "../../small_components/location_link/location_link"
 
 const Header = (props) => {
     return (
         <header>
+            <section className="header-location-link">
+                <LocationLink/>
+            </section>
             <section className="header-content">
                 <section className="site-name">
                     <Logo/>
@@ -16,7 +20,9 @@ const Header = (props) => {
                     <LoginButton/>
                 </section>
                 { props.showNav ? 
-                <NavigationBar/> : <></>
+                    (<section className="navigation">
+                        <NavigationBar/>
+                    </section>) : <></>
                 }
             </section>
         </header>
