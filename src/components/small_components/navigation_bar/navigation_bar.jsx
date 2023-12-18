@@ -23,7 +23,7 @@ const NavigationBar = () => {
             <ul>
                 <li><NavLink className="NavLink" to="/">HOME</NavLink></li>
                 <li><NavLink className="NavLink" to="#">CAT</NavLink></li>
-                <li><NavLink className="NavLink" to="#">DOG</NavLink></li>
+                <li><NavLink className="NavLink" to="/dog">DOG</NavLink></li>
                 <li><NavLink className="NavLink" to="#">HAMSTER</NavLink></li>
                 <li><NavLink className="NavLink" to="#">RABBIT</NavLink></li>
                 <li><NavLink className="NavLink" to="#">BIRD</NavLink></li>
