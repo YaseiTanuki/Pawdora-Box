@@ -1,5 +1,8 @@
 import "./footer_info.scss"
 import SocialMedia from "../social_media/social_media"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import paymentMethod from "../../../assets/img/payment.svg"
+
 
 const FooterInfo = () => {
     return (
@@ -18,11 +21,11 @@ const FooterInfo = () => {
             </article>
             <article className="finfo-contact">
                 <h4>LIÊN HỆ</h4>
-                <h5>Địa chỉ</h5>
-                <p>10 Khu phố 6, phường Linh Trung, Tp Thủ Đức, Tp Hồ Chí Minh, Việt Nam</p>
-                <h5>Hotline</h5>
+                <h5><FontAwesomeIcon icon="location-dot"/> Địa chỉ</h5>
+                <p>10 Khu phố 6, phường Linh Trung, Tp Thủ Đức,<br />Tp Hồ Chí Minh, Việt Nam</p>
+                <h5><FontAwesomeIcon icon="phone"/> Hotline</h5>
                 <p>0983xxxxxx</p>
-                <h5>Email</h5>
+                <h5><FontAwesomeIcon icon="envelope"/> Email</h5>
                 <p>pawdorabox@gmail.com</p>
                 <h5>Thời gian mở cửa</h5>
                 <p>Thứ hai - Thứ sáu: 8am - 7pm</p>
@@ -33,7 +36,7 @@ const FooterInfo = () => {
             <article className="finfo-payment-method">
                 <h4>THANH TOÁN AN TOÀN</h4>
                 <article>
-                    <img src="" alt="" />
+                    <img src={paymentMethod} alt="" />
                 </article>
             </article>
         </section>

@@ -1,17 +1,35 @@
 .finfo-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     
     .finfo-contact {
         grid-column: 3 / 4;
+
+        p {
+            padding-left: 13px;
+            margin-top: -12px;
+        }
+
+        h5 {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            padding: 0;
+        }
     }
 
     .finfo-shopping {
         grid-column: 2 / 3;
+        margin-left: -10rem;
     }
 
     .finfo-about-us {
         grid-column: 1 / 2;
+    }
+
+    .finfo-payment-method {
+        grid-column: 4/5;
     }
 }
