@@ -53,7 +53,7 @@ const categories = [
  
 ];
 
-const App = () => {
+const ProductPage = () => {
   const [filteredCategory, setFilteredCategory] = useState('Tất cả');
   const [sortBy, setSortBy] = useState('Giá tăng dần');
   const [currentPage, setCurrentPage] = useState(1);
@@ -133,7 +133,6 @@ const App = () => {
                 product={product}
                 onAddToCart={handleAddToCart}
                 onBuyNow={handleBuyNow}
-                onNavigate={navigateToDetail}
               />
             ))}
           </div>
@@ -156,4 +155,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ProductPage;

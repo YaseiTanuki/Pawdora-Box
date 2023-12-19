@@ -5,6 +5,7 @@ import ProductCard from "../../components/small_components/product_card/product_
 import Header from "../../components/big_components/header/header"
 import Footer from "../../components/big_components/footer/footer"
 import React, { useState } from 'react'
+import SaleCard from "../../components/small_components/sale_card/sale_card"
 
 const Home = () => {
   
@@ -55,6 +56,11 @@ const Home = () => {
                             <li><QuickChoiceButton name="Thức ăn cho mèo"/></li>
                             <li><QuickChoiceButton name="Trừ bọ chét. ve"/></li>
                             <li><QuickChoiceButton name="Đồ chơi"/></li>
+                        </ul>
+                    </article>
+                    <article className="sale-list">
+                        <ul>
+                            <li><SaleCard img="public/img/home-product/cat1.webp"/></li>
                         </ul>
                     </article>
                     <article className="new-product">

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
-const Product = ({ product, onAddToCart, onBuyNow, onNavigate }) => {
+const Product = ({ product, onAddToCart, onBuyNow }) => {
   const { id, name, price, discountPrice, img } = product;
 
   const navigator = useNavigate()
@@ -29,13 +29,10 @@ const Product = ({ product, onAddToCart, onBuyNow, onNavigate }) => {
     }, 3000);
   };
 
-  const navigateToDetail = (id) => {
-        navigator(id+'/detail')
-  }
 
   return (
     <div className="product">
-      <article onClick={()=> onNavigate(id)}>
+      <article className="product-click" onClick={() => {navigator('/' + id + '/detail')}}>
       <img src={img} alt={name}/>
       <h4>{name}</h4>
       <div className="price-container">
