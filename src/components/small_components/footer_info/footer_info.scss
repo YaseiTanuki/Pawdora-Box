@@ -3,8 +3,8 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     
-    .finfo-service {
-        grid-column: 1 / 2;
+    .finfo-contact {
+        grid-column: 3 / 4;
     }
 
     .finfo-shopping {
@@ -12,6 +12,6 @@
     }
 
     .finfo-about-us {
-        grid-column: 3 / 4;
+        grid-column: 1 / 2;
     }
 }
