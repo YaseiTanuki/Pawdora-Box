@@ -1,10 +1,13 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
 
 const Filter = ({ categories, onChange, onSortChange }) => {
   return (
     <div className="filter">
-
-      <h2>Danh mục:</h2>
+      <h2>
+        <FontAwesomeIcon icon={faFilter} /> Danh mục:
+      </h2>
       {categories.map((category) => (
         <label key={category}>
           <input

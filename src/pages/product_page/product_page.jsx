@@ -6,33 +6,35 @@ import Header from '../../components/big_components/header/header';
 import Footer from '../../components/big_components/footer/footer';
 
 const productsData = [
-  { id: 1, name: 'Product 1', category: 'Thức ăn', price: 20 },
-  { id: 2, name: 'Product 2', category: 'Đồ uống', price: 15 },
-  { id: 3, name: 'Product 3', category: 'Snack', price: 10 },
-  { id: 4, name: 'Product 4', category: 'Phụ kiện', price: 25 },
-  { id: 5, name: 'Product 5', category: 'Quần áo', price: 30 },
-  { id: 6, name: 'Product 6', category: 'Dịch vụ', price: 50 },
-  { id: 7, name: 'Product 7', category: 'Tỉa lông', price: 15 },
-  { id: 8, name: 'Product 8', category: 'Tắm', price: 18 },
-  { id: 9, name: 'Product 9', category: 'Giặt ủi', price: 22 },
-  { id: 10, name: 'Product 1', category: 'Thức ăn', price: 20 },
-  { id: 11, name: 'Product 2', category: 'Đồ uống', price: 15 },
-  { id: 12, name: 'Product 3', category: 'Snack', price: 10 },
-  { id: 13, name: 'Product 4', category: 'Phụ kiện', price: 25 },
-  { id: 14, name: 'Product 5', category: 'Quần áo', price: 30 },
-  { id: 15, name: 'Product 6', category: 'Dịch vụ', price: 50 },
-  { id: 16, name: 'Product 7', category: 'Tỉa lông', price: 15 },
-  { id: 17, name: 'Product 8', category: 'Tắm', price: 18 },
-  { id: 18, name: 'Product 9', category: 'Giặt ủi', price: 22 },
-  { id: 19, name: 'Product 1', category: 'Thức ăn', price: 20 },
-  { id: 20, name: 'Product 2', category: 'Đồ uống', price: 15 },
-  { id: 21, name: 'Product 3', category: 'Snack', price: 10 },
-  { id: 22, name: 'Product 4', category: 'Phụ kiện', price: 25 },
-  { id: 23, name: 'Product 5', category: 'Quần áo', price: 30 },
-  { id: 24, name: 'Product 6', category: 'Dịch vụ', price: 50 },
-  { id: 25, name: 'Product 7', category: 'Tỉa lông', price: 15 },
-  { id: 26, name: 'Product 8', category: 'Tắm', price: 18 },
-  { id: 27, name: 'Product 9', category: 'Giặt ủi', price: 22 },
+  { id: 1, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 30000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 2, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 3, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 4, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 5, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 6, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 7, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 8, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 9, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 10, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 11, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 12, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 13, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 14, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 15, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 16, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 17, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 18, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 19, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 20, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 21, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 22, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 23, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 24, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 25, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 26, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 27, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 28, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 29, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
 ];
 
 const categories = [
@@ -41,11 +43,14 @@ const categories = [
   'Đồ uống',
   'Snack',
   'Phụ kiện',
-  'Quần áo',
-  'Dịch vụ',
+  'Thuốc và dinh dưỡng',
+  'Kiểm tra',
   'Tỉa lông',
   'Tắm',
-  'Giặt ủi',
+  'Trừ bọ chét, ve',
+  'Tiêm ngừa',
+  'Khách sạn thú cưng',
+ 
 ];
 
 const App = () => {
@@ -90,6 +95,19 @@ const App = () => {
     setCurrentPage(pageNumber);
   };
 
+  const handleAddToCart = (productId) => {
+    // Thêm logic để xử lý thêm vào giỏ hàng
+    console.log(`Thêm sản phẩm có ID ${productId} vào giỏ hàng`);
+  };
+
+  const handleBuyNow = (productId) => {
+    // Thêm logic để xử lý mua ngay
+    console.log(`Mua ngay sản phẩm có ID ${productId}`);
+  };
+  const navigateToDetail = (id) => {
+    navigator(id+'/detail')
+}
+
   return (
     <>
       <Header showNav={true} />
@@ -103,15 +121,20 @@ const App = () => {
         </div>
         <div className="products">
           <div className='sort_container'>
-            <span>Sắp xếp theo:</span>
-            <select onChange={(e) => handleSortChange(e.target.value)}>
+            <select className='list' onChange={(e) => handleSortChange(e.target.value)}>
               <option value="Giá tăng dần">Giá tăng dần</option>
               <option value="Giá giảm dần">Giá giảm dần</option>
             </select>
           </div>
           <div className='product_list2'>
             {currentProducts.map((product) => (
-              <Product key={product.id} product={product} />
+              <Product
+                key={product.id}
+                product={product}
+                onAddToCart={handleAddToCart}
+                onBuyNow={handleBuyNow}
+                onNavigate={navigateToDetail}
+              />
             ))}
           </div>
 
