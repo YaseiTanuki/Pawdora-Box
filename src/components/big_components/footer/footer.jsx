@@ -11,19 +11,10 @@ const Footer = () => {
                 <div className="footer-logo-container">
                     <Logo/>
                 </div>
-                <div className="footer-location-container">
-                    <LocationLink/>
-                </div>
             </section>
 
             <section className="footer-info">
                 <FooterInfo/>
-            </section>
-
-            <section className="footer-support">
-                <div className="footer-social-media-container">
-                    <SocialMedia/>
-                </div>
             </section>
         </footer>
     )
