@@ -1,6 +1,6 @@
-import { faLocationDot, faRightToBracket, faCaretDown, faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons"
+import {faEnvelope, faPhone, faLocationDot, faRightToBracket, faCaretDown, faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons"
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { faFacebook, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
+import { faEvernote, faFacebook, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
 
 library.add(faLocationDot,
             faRightToBracket,
@@ -9,4 +9,5 @@ library.add(faLocationDot,
             faYoutube,
             faCaretDown,
             faUser,
-            faCartShopping)
+            faCartShopping,
+            faPhone, faEnvelope)
