@@ -3,6 +3,12 @@
     list-style: none;
     gap: 2rem;
     li {
-        font-size: 2rem;
+        a {
+            img {
+                padding: 3px;
+                border: 1px solid black;
+                border-radius:  7px;
+            }
+        }
     }
 }
