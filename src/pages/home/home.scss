@@ -4,9 +4,7 @@
     grid-column: 1 / 13;
     display: grid;
     grid-template-columns: subgrid;
-    background-image: url(../../assets/img/background.svg);
-    background-size: 500px;
-    background-repeat: repeat;
+    background-color: white;
 
     .banner-container {
         border-bottom: 1px solid black;
