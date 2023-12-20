@@ -12,6 +12,8 @@
         text-align: center;
         h1 {
             margin-top: 15%;
+            color:#000000;
+            margin: 0 0;
         }
         .Logo {
             background-image: url(/img/logo.svg);
@@ -23,53 +25,66 @@
             font-family: "Aileron";
             font-size: 2rem;
         
-            color: red;
+            color: #002E5D;
         }
    }
 
     form {
-        margin-left:50px;
-        margin-top: 2.5rem;
+        margin-left:150px;
+        margin-top: 0.5rem;
         width: 100%;
         label, input {
-            margin: 1rem;
+            margin: 1rem 1rem 1rem 0;
+        }
+        .input-container {
+            position: relative;
+        }
+        
+        .email-icon, .lock-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0rem;
         }
 
         input {
             border-width: 0 0 1px 0;
-            width: 80%;
-            background-color: #fbfbfb;
+            width: 70%;
+            background-color: #ffffff;
             &:focus {
                 outline: none;
             }
+        }
+        input::placeholder {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 25px;
         }
         .options-row {
             justify-content: space-between; 
             align-items: center;
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            column-gap: 10px;
+            grid-template-columns: 0.5fr 0.5fr;
+            column-gap: 0px;
             
             .remember-account{
                 display: flex;
                 align-items: center;
         
                 input {
-                    min-width: 50px;
-                    margin-left: -100px;
+                    margin-left: -85px;
                 }
                 label{
-                    min-width:100px;
-                    margin-left: -100px;
+                    margin-left: -85px;
                 }
             }
             .forgot-password{
-                text-align: right;
-                margin-right: 70px;
+            
+                margin-right: 50px;
                 
                 a{
                     text-decoration:none;
-                    color:#45a049;
                 }
                
             }
@@ -81,7 +96,7 @@
             .eye-icon {
                 position: absolute;
                 top: 50%;
-                right: 5rem;
+                right: 9rem;
                 transform: translate(0, -50%);
                 cursor: pointer;
             }
@@ -89,7 +104,7 @@
     }
     button {
         padding: 0.5rem 1rem;
-        background-color: #4CAF50;
+        background-color: #002E5D;
         color: white;
         border: none;
         border-radius: 10px;
@@ -99,17 +114,19 @@
     }
 
     button:hover {
-        background-color: #45a049; 
+        background-color: #000000; 
     }
 
     p{
         white-space: nowrap;
         display: flex; 
         align-items: center;
+        margin-bottom: 50px;
         .NavLink {
             text-decoration:none;
-            color:#45a049;
+            color:#002E5D;
         }
+
     }
     
 }

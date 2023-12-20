@@ -2,6 +2,7 @@
 .product-detail {
   display: flex;
   grid-column: 1/13;
+  padding: 0 0;
   margin-bottom: 40px;
 .img{
   width: 600px;
@@ -10,6 +11,7 @@
   margin-top: 20px;
   .image {
     width: 567px; 
+    height: 400px;
   }
 
   .image1 {
@@ -17,10 +19,43 @@
   }
 }
 
+.buy-now-button, .add-to-cart-button{
+  background-color: #003c6a;
+  color:white;
+  margin-right: 4px;
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 5px;
+  padding: 8px 40px;
+  cursor: pointer;
+  &:hover{
+    background-color: #2c88cf;
+    color: black;
+    
+  }
+}
+.added-to-cart-message{
+  color: #003c6a;
+  font-size: 10px;
+  margin-block-start: 7px;
+  display: flex;
+}
+.add-to-cart-button{
+  background-color: #E4EEFA;
+  color: black;
+  padding: 6px 59px 8px 58px;
+  font-size: 15px;
+}
+
 .content{
 
   .rating{
     margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    .rat{
+      font-size: 18px;
+      margin-right: 10px;
+    }
   .star-icon {
     color: #ffd700; /* Màu vàng cho ngôi sao đầy đủ */
     margin-right: 2px; /* Khoảng cách giữa các ngôi sao */
@@ -28,43 +63,53 @@
 }
   h2 {
     margin-bottom: 10px; /* Khoảng cách giữa tên và giá */
+    color: #002E5D;
   }
 
   .price-container {
     display: flex;
-  
-    margin-bottom: 20px; /* Khoảng cách giữa giá và mô tả */
+    height: 30px;
+    margin-bottom: 5px; /* Khoảng cách giữa giá và mô tả */
   }
 
   .discount-price {
     display: flex;
 
-    .discounted {
+    .discounted, .original, .gach {
       font-size: 1.2em; /* Kích thước lớn hơn cho giá giảm */
-      color: red; /* Màu đỏ cho giá giảm */
-      margin-right: 40px;
+      color: rgba(200, 2, 2, 0.714); /* Màu đỏ cho giá giảm */
+      margin-right: 10px;
+      font-weight: bold;
     }
+    
 
-    .original {
-      text-decoration: line-through; /* Gạch ngang cho giá gốc */
-    }
+    // .original {
+    //   text-decoration: line-through; /* Gạch ngang cho giá gốc */
+    // }
   }
-
-  .description {
-    margin-bottom: 20px; /* Khoảng cách giữa mô tả và thông tin bổ sung */
+  .num-reviews, .num-sold, .rating{
+    margin-bottom: 10px;
   }
 
 }
 
 .quantity {
   display: flex;
-  align-items: center; /* Căn giữa theo chiều dọc */
+  align-items: center; 
+  p{
+    margin-right: 20px;
+  }
 }
 
-.quantity-button {
-  padding: 8px; /* Điều chỉnh padding theo nhu cầu */
-  font-size: 16px; /* Điều chỉnh kích thước font theo nhu cầu */
+.quantity-button{
+  padding: 0 3px 0 3px; /* Điều chỉnh padding theo nhu cầu */
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid black;
   cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 .quantity-info {

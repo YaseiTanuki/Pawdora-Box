@@ -6,11 +6,11 @@ import Header from '../../components/big_components/header/header';
 import Footer from '../../components/big_components/footer/footer';
 import productImage from '../../../public/img/home-product/meo.png'
 import main1_1 from '../../../public/img/home-product/meo.png'
-import main1 from '../../../public/img/home-product/hatkho.webp'
+import main1 from '../../../public/img/home-product/hatkho.jpg'
 
 const productsData = [
-  { id: 1, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 30000, img: productImage, discountPrice: 40000, img1: main1_1, rating: 4.8, numReviews: 2000, numSold: 1000, quantity: 0 },
-  { id: 2, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: main1, discountPrice: 40000 },
+  { id: 1, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 30000, img: productImage, discountPrice: 40000, img1: main1_1, rating: 4.8, numReviews: 2000, numSold: 1000, quantity: 0, detail1:'Sữa tắm cho chó mèo DORRIKEY với tinh dầu chiết xuất từ hoa hồng, sản phẩm này đóng vai trò của các chức năng da trong việc khử mùi hôi của chó mèo một cách hiệu quả nhất.', detail2:'Khử mùi và lưu lại hương thơm, giữ ẩm cho bộ lông mềm mượt, chiết xuất tinh chất thực vật, an toàn cho sức khỏe. 100% sử dụng thành phần chiết xuất tự nhiên: hoa hồng, tinh dầu dừa, lá bạc hà và vỏ cam.',detail3:'Tuyệt đối an toàn khi sử dụng, không gây kích ứng da của các boss.' },
+  { id: 2, name: 'Sữa tắm DORRIKEY cho chó', category: 'Phụ kiện', price: 50000, price2:85000, img: main1, discountPrice: 40000, img1: main1_1, rating: 4.8, numReviews: 2000, numSold: 1000, quantity: 0 },
   { id: 3, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
   { id: 4, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
   { id: 5, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },

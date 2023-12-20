@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 
 
 const Register = () => {
@@ -18,23 +19,27 @@ const Register = () => {
                 <h1>ĐĂNG KÝ</h1>
             </div>
             <form action="">
-                <label htmlFor="user-name">Họ và tên:</label><br />
-                <input type="text" /><br />
-                <label htmlFor="phone">Số điện thoại:</label><br />
-                <input type="text" /><br />
-                <label htmlFor="email">Email:</label><br />
-                <input type="email" /><br />
-                <label htmlFor="password">Mật khẩu:</label><br />
+                <div className="input-container">
+                    <FontAwesomeIcon icon={faUser} className="user-icon" />
+                    <input type="text" placeholder="Họ và tên" />
+                </div>
+
+                <div className="input-container">
+                    
+                    <FontAwesomeIcon icon={faEnvelope} className="email-icon" />
+                    <input type="email" placeholder="Email" />
+                </div>
                 <div className="password-input-container">
-                    <input type={showPassword ? "text" : "password"} />
+                    <FontAwesomeIcon icon={faLock} className="lock-icon" />
+                    <input placeholder="Mật khẩu" type={showPassword ? "text" : "password"} />
                     <FontAwesomeIcon
                         icon={showPassword ? faEye : faEyeSlash}
                         onClick={togglePasswordVisibility}
                         className="eye-icon"/>
                 </div>
-                <label for="psw-repeat">Nhập lại mật khẩu: </label><br />
                 <div className="password-input-container">
-                    <input type={showPassword ? "text" : "password"} />
+                    <FontAwesomeIcon icon={faLock} className="lock-icon" />
+                    <input  placeholder="Nhập lại mật khẩu" type={showPassword ? "text" : "password"} />
                     <FontAwesomeIcon
                         icon={showPassword ? faEye : faEyeSlash}
                         onClick={togglePasswordVisibility}
@@ -46,7 +51,7 @@ const Register = () => {
             </NavLink>
             <p className="notaccount">Bạn đã có tài khoản? &nbsp;
                 <NavLink to="/login" className="NavLink">
-                    <span> Đăng nhập</span>
+                    <span> Đăng nhập ngay</span>
                 </NavLink>
             </p>
         </article>

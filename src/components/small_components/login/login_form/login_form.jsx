@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
-
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLock } from '@fortawesome/free-solid-svg-icons'
 
 const LoginForm = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -26,9 +27,13 @@ const LoginForm = () => {
                 <h1>ĐĂNG NHẬP</h1>
             </div>
             <form action="">
-                <input type="text" /><br />
+            <div className="input-container">
+                <FontAwesomeIcon icon={faEnvelope} className="email-icon" />
+                <input type="email" placeholder="Email" />
+            </div>
                 <div className="password-input-container">
-                    <input type={showPassword ? "text" : "password"} />
+                    <FontAwesomeIcon icon={faLock} className="lock-icon" />
+                    <input placeholder="Mật khẩu" type={showPassword ? "text" : "password"} />
                     <FontAwesomeIcon
                         icon={showPassword ? faEye : faEyeSlash}
                         onClick={togglePasswordVisibility}
@@ -55,7 +60,7 @@ const LoginForm = () => {
             </NavLink>
             <p className="notaccount">Bạn chưa có tài khoản? &nbsp;
                 <NavLink to="/register" className="NavLink">
-                    <span> Đăng ký</span>
+                    <span> Đăng ký ngay</span>
                 </NavLink>
             </p>
         </article>
