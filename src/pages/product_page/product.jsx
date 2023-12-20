@@ -34,7 +34,7 @@ const Product = ({ product, onAddToCart, onBuyNow }) => {
   };
 
   const handleProductClick = () => {
-    setProductID(id - 1);
+    setProductID(productID + 1);
     navigator('/' + id + '/detail');
   };
 

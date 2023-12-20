@@ -14,8 +14,20 @@ import { productsData } from "./pages/product_page/product_page"
 import React, { useEffect, useState, useContext } from 'react'
 function App() {
   const {productID, setProductID} = useContext(ProductContext)
-  let myURL = document.URL.replace("/detail", '')
-  let viewProductID = myURL.slice(-1) - 1
+  const [viewProductID, setViewProductID] = useState("1")
+
+  useEffect(() => {
+    function getProductID () {
+      if(document.URL.includes("/detail")) {
+        let myURL = document.URL.replace("/detail", '')
+        setViewProductID(myURL.slice(-1) - 1)
+        console.log(myURL.slice(-1))
+      }
+    }
+
+    getProductID();
+  }, [productID])
+
   return (
     <>
       <Routes>
