@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import ProductContext from '../../../hooks/productContext';
 
 const Product = ({ product, onAddToCart, onBuyNow }) => {
   const { id, name, price, discountPrice, img } = product;
 
+  const {productID, setProductID} = useContext(ProductContext)
+
   const navigator = useNavigate()
 
   const [showAddedToCartMessage, setShowAddedToCartMessage] = useState(false);
+
 
   // Hàm để định dạng số có dấu phẩy và tiền tệ
   const formatPrice = (amount) => {
@@ -29,10 +33,15 @@ const Product = ({ product, onAddToCart, onBuyNow }) => {
     }, 3000);
   };
 
+  const handleProductClick = () => {
+    setProductID(id);
+    navigator('/' + id + '/detail');
+  };
+
 
   return (
     <div className="product">
-      <article className="product-click" onClick={() => {navigator('/' + id + '/detail')}}>
+      <article className="product-click" onClick={handleProductClick}>
       <img src={img} alt={name}/>
       <h4>{name}</h4>
       <div className="price-container">

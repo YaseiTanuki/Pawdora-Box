@@ -1,0 +1,74 @@
+/* Thêm nội dung này vào file productdetail.scss hoặc một file SCSS khác */
+.product-detail {
+  display: flex;
+  grid-column: 1/13;
+  margin-bottom: 40px;
+.img{
+  width: 600px;
+  height: auto;
+  margin-left: 150px;
+  margin-top: 20px;
+  .image {
+    width: 567px; 
+  }
+
+  .image1 {
+    width: 67px;
+  }
+}
+
+.content{
+
+  .rating{
+    margin-top: 20px;
+  .star-icon {
+    color: #ffd700; /* Màu vàng cho ngôi sao đầy đủ */
+    margin-right: 2px; /* Khoảng cách giữa các ngôi sao */
+  }
+}
+  h2 {
+    margin-bottom: 10px; /* Khoảng cách giữa tên và giá */
+  }
+
+  .price-container {
+    display: flex;
+  
+    margin-bottom: 20px; /* Khoảng cách giữa giá và mô tả */
+  }
+
+  .discount-price {
+    display: flex;
+
+    .discounted {
+      font-size: 1.2em; /* Kích thước lớn hơn cho giá giảm */
+      color: red; /* Màu đỏ cho giá giảm */
+      margin-right: 40px;
+    }
+
+    .original {
+      text-decoration: line-through; /* Gạch ngang cho giá gốc */
+    }
+  }
+
+  .description {
+    margin-bottom: 20px; /* Khoảng cách giữa mô tả và thông tin bổ sung */
+  }
+
+}
+
+.quantity {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.quantity-button {
+  padding: 8px; /* Điều chỉnh padding theo nhu cầu */
+  font-size: 16px; /* Điều chỉnh kích thước font theo nhu cầu */
+  cursor: pointer;
+}
+
+.quantity-info {
+  margin: 0 10px; /* Khoảng cách giữa nút và số lượng */
+  font-size: 18px; /* Điều chỉnh kích thước font theo nhu cầu */
+}
+}

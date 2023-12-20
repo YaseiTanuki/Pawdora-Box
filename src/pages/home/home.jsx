@@ -7,6 +7,7 @@ import Footer from "../../components/big_components/footer/footer"
 import React, { useState } from 'react'
 import SaleCard from "../../components/small_components/sale_card/sale_card"
 
+
 const Home = () => {
   
     const [displayedProducts, setDisplayedProducts] = useState(10)

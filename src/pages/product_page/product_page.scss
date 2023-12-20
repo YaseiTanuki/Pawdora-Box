@@ -39,12 +39,17 @@
     button {
       margin: 5px;
       background-color: var(--brand-color);
-      border-radius: 5px;
+      border-radius: 10px;
       background-color: white;
       border: 1px solid rgb(192, 192, 192);
+      font-weight: bold;
       &:hover{
         background-color: #003c6a;
         color:white;
+      }
+      &.active {
+        background-color: #003c6a;
+        color: white;
       }
     }
   }
@@ -109,31 +114,47 @@
 }
 
 .filter_container{
-  min-width: 200px;
-  .filter {
+  min-width: 270px;
+  .category-group {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    
+    color: #002E5D;
     margin-left: 50px;
     margin-inline-end: 50px;
 
     span {
       margin-right: 10px;
     }
+    img{
+      float: left;
+      margin-right: 7px;
+      width: 20px;
+      height: 21px;
+    }
     h2{
       margin: 0 0;
       font-size: 21px;
     }
+    h3{
+      margin: 0 0;
+      font-size: 21px;
+      margin-left: 20px;
+    }
     label {
       margin-right: 10px;
       margin-top: 8px;
+      display: flex;
+      align-items:normal;
 
       input {
         margin-right: 5px;
+        width: 15px;
+        height: 15px;
       }
     }
   }
+  
 }
 }
 

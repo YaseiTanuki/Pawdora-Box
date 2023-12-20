@@ -4,37 +4,40 @@ import Product from './product';
 import Filter from './filter';
 import Header from '../../components/big_components/header/header';
 import Footer from '../../components/big_components/footer/footer';
+import productImage from '../../../public/img/home-product/meo.png'
+import main1_1 from '../../../public/img/home-product/meo.png'
+import main1 from '../../../public/img/home-product/hatkho.webp'
 
 const productsData = [
-  { id: 1, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 30000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 2, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 3, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 4, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 5, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 6, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 7, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 8, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 9, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 10, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 11, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 12, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 13, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 14, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 15, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 16, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 17, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 18, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 19, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 20, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 21, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 22, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 23, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 24, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 25, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 26, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 27, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 28, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
-  { id: 29, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: "public/img/home-product/meo.png", discountPrice: 40000 },
+  { id: 1, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 30000, img: productImage, discountPrice: 40000, img1: main1_1, rating: 4.8, numReviews: 2000, numSold: 1000, quantity: 0 },
+  { id: 2, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: main1, discountPrice: 40000 },
+  { id: 3, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 4, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 5, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 6, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 7, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 8, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 9, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 10, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 11, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 12, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 13, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 14, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 15, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 16, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 17, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 18, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 19, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 20, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 21, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 22, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 23, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 24, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 25, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 26, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 27, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 28, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
+  { id: 29, name: 'Bánh sữa dê bổ sung dinh dưỡng cho mèo', category: 'Thức ăn', price: 50000, img: productImage, discountPrice: 40000 },
 ];
 
 const categories = [
@@ -43,15 +46,19 @@ const categories = [
   'Đồ uống',
   'Snack',
   'Phụ kiện',
-  'Thuốc và dinh dưỡng',
+  'Thuốc và dinh dưỡng', 
   'Kiểm tra',
   'Tỉa lông',
   'Tắm',
   'Trừ bọ chét, ve',
   'Tiêm ngừa',
   'Khách sạn thú cưng',
- 
 ];
+
+const midpoint = Math.ceil(categories.length / 2);
+
+const categories1 = categories.slice(0, midpoint);
+const categories2 = categories.slice(midpoint);
 
 const ProductPage = () => {
   const [filteredCategory, setFilteredCategory] = useState('Tất cả');
@@ -104,9 +111,6 @@ const ProductPage = () => {
     // Thêm logic để xử lý mua ngay
     console.log(`Mua ngay sản phẩm có ID ${productId}`);
   };
-  const navigateToDetail = (id) => {
-    navigator(id+'/detail')
-}
 
   return (
     <>
@@ -114,7 +118,8 @@ const ProductPage = () => {
       <div className="app">
         <div className="filter_container">
           <Filter
-            categories={categories}
+            categories1={categories1}
+            categories2={categories2}
             onChange={handleFilterChange}
             onSortChange={handleSortChange}
           />
@@ -156,3 +161,5 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
+
+export { productsData };

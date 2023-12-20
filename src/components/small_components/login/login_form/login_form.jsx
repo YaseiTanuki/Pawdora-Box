@@ -26,9 +26,7 @@ const LoginForm = () => {
                 <h1>ĐĂNG NHẬP</h1>
             </div>
             <form action="">
-                <label htmlFor="user-name">Họ và tên:</label><br />
                 <input type="text" /><br />
-                <label htmlFor="password">Mật khẩu:</label><br />
                 <div className="password-input-container">
                     <input type={showPassword ? "text" : "password"} />
                     <FontAwesomeIcon

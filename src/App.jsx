@@ -9,8 +9,11 @@ import RegisterPage from "./pages/register/register"
 import PayPage from "./pages/pay_page/pay_page"
 import ProductPage from "./pages/product_page/product_page"
 import ProductDetail from './pages/product_detail/productdetail';
-
+import ProductContext from "../hooks/productContext"
+import { productsData } from "./pages/product_page/product_page"
+import React, { useEffect, useState, useContext } from 'react'
 function App() {
+  const {productID, setProductID} = useContext(ProductContext)
   return (
     <>
       <Routes>
@@ -20,7 +23,7 @@ function App() {
         <Route path="/register" element={<RegisterPage/>}/>
         <Route path="/pay" element={<PayPage/>}/>
         <Route path="/dog" element={<ProductPage/>}/>
-        <Route path="/1/detail" element={<ProductDetail/>}/>
+        <Route path="/:id/detail"  element={<ProductDetail product={productsData[productID]}/>}/>
       </Routes>
     </>
   )

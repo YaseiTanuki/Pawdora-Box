@@ -1,24 +1,42 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import filter_icon from '../../../public/img/filter.svg';
 
-const Filter = ({ categories, onChange, onSortChange }) => {
+const Filter = ({ categories1, categories2, onChange }) => {
   return (
     <div className="filter">
-      <h2>
-        <FontAwesomeIcon icon={faFilter} /> Danh mục:
-      </h2>
-      {categories.map((category) => (
-        <label key={category}>
-          <input
-            type="radio"
-            name="category"
-            value={category}
-            onChange={() => onChange(category)}
-          />
-          {category}
-        </label>
-      ))}
+      
+      <div className="category-group">
+      <div>
+        <img src={filter_icon} /> <h2>Danh mục:</h2>
+      </div>
+        {categories1.map((category) => (
+          <label key={category}>
+            <input
+              type="radio"
+              name="category"
+              value={category}
+              onChange={() => onChange(category)}
+            />
+            {category}
+          </label>
+        ))}
+      </div>
+      <div className="category-group">
+        <h3>Dịch vụ</h3>
+        {categories2.map((category) => (
+          <label key={category}>
+            <input
+              type="radio"
+              name="category"
+              value={category}
+              onChange={() => onChange(category)}
+            />
+            {category}
+          </label>
+        ))}
+      </div>
     </div>
   );
 };
