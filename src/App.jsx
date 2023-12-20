@@ -14,6 +14,8 @@ import { productsData } from "./pages/product_page/product_page"
 import React, { useEffect, useState, useContext } from 'react'
 function App() {
   const {productID, setProductID} = useContext(ProductContext)
+  let myURL = document.URL.replace("/detail", '')
+  let viewProductID = myURL.slice(-1) - 1
   return (
     <>
       <Routes>
@@ -23,7 +25,7 @@ function App() {
         <Route path="/register" element={<RegisterPage/>}/>
         <Route path="/pay" element={<PayPage/>}/>
         <Route path="/dog" element={<ProductPage/>}/>
-        <Route path="/:id/detail"  element={<ProductDetail product={productsData[productID]}/>}/>
+        <Route path="/:id/detail"  element={<ProductDetail product={productsData[viewProductID]}/>}/>
       </Routes>
     </>
   )
