@@ -16,6 +16,9 @@ const Footer = () => {
             <section className="footer-info">
                 <FooterInfo/>
             </section>
+            <section className="copy-right">
+                <p> &#169;2023 Pawdora Box all rights reserved. Privacy Policy Terms</p>
+            </section>
         </footer>
     )
 }

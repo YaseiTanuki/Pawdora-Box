@@ -8,7 +8,7 @@
 .img{
   width: 600px;
   height: auto;
-  margin-left: 150px;
+  margin-left: 190px;
   margin-top: 20px;
   .image {
     width: 567px; 
@@ -16,7 +16,7 @@
   }
 
   .image1 {
-    width: 67px;
+    width: 150px;
   }
 }
 
@@ -48,6 +48,27 @@
 }
 
 .content{
+  margin-inline-start: 125px;
+  .options{
+    p{
+      margin:0;
+      margin-top: 20px;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+    
+    input{
+      margin-left: 20px;
+      margin-right: 5px;
+      width: 17px;
+      height: 17px;
+    }
+    label{
+      display: inline-flex;
+      align-items: center;
+     
+    }
+  }
 
   .rating{
     margin-top: 20px;
@@ -145,6 +166,7 @@
   li{
     margin-top: 20px;
     list-style: none;
+    border-bottom: 1px solid rgb(187, 187, 187);
   }
   .star-icon{
     color:#ffd700;

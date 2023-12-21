@@ -26,6 +26,7 @@
             font-size: 2rem;
         
             color: #002E5D;
+            font-weight: bold;
         }
    }
 
@@ -38,7 +39,7 @@
         }
         .input-container {
             position: relative;
-            border-bottom: 1px solid black;
+            margin-left: 40px;
         }
         
         .email-icon, .lock-icon {
@@ -56,14 +57,8 @@
             &:focus {
                 outline: none;
             }
-            border: none;
         }
-        input::placeholder {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 25px;
-        }
+      
         .options-row {
             justify-content: space-between; 
             align-items: center;
@@ -76,10 +71,10 @@
                 align-items: center;
         
                 input {
-                    margin-left: -85px;
+                    margin-left: -80px;
                 }
                 label{
-                    margin-left: -85px;
+                    margin-left: -100px;
                 }
             }
             .forgot-password{
@@ -88,6 +83,7 @@
                 
                 a{
                     text-decoration:none;
+                    margin-left: 25px;
                 }
                
             }
@@ -95,14 +91,14 @@
         
         .password-input-container{
             position: relative;
-
+            margin-left: 40px;
             .eye-icon {
                 position: absolute;
                 top: 50%;
                 right: 9rem;
                 transform: translate(0, -50%);
                 cursor: pointer;
-                margin-right: 45px;
+                margin-right: 30px;
             }
         }
     }

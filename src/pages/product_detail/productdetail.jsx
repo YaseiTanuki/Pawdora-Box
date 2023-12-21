@@ -71,6 +71,19 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
     setQuantity(quantity + 1);
   };
 
+  const [selectedColor, setSelectedColor] = useState('Cam'); // Default color
+  const [selectedVolume, setSelectedVolume] = useState('350ml'); // Default volume
+
+  // Handle color change
+  const handleColorChange = (event) => {
+    setSelectedColor(event.target.value);
+  };
+
+  // Handle volume change
+  const handleVolumeChange = (event) => {
+    setSelectedVolume(event.target.value);
+  };
+
   return (
     <>
       <Header showNav={true} />
@@ -89,6 +102,65 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
           </div>
           <div className="num-reviews">{numReviews} Đánh giá</div>
           <div className="num-sold">{numSold} Đã bán</div>
+          <div className="options">
+          <p>Màu sắc</p>
+            <label>
+               
+              <input
+                type="radio"
+                value="Vàng"
+                checked={selectedColor === 'Vàng'}
+                onChange={handleColorChange}
+              />
+              Vàng
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="Hồng"
+                checked={selectedColor === 'Hồng'}
+                onChange={handleColorChange}
+              />
+              Hồng
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="Tím"
+                checked={selectedColor === 'Tím'}
+                onChange={handleColorChange}
+              />
+              Tím
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="Cam"
+                checked={selectedColor === 'Cam'}
+                onChange={handleColorChange}
+              />
+              Cam
+            </label> 
+            <p>Thể tích</p> 
+            <label>
+              <input
+                type="radio"
+                value="350ml"
+                checked={selectedVolume === '350ml'}
+                onChange={handleVolumeChange}
+              />
+              350ml
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="510ml"
+                checked={selectedVolume === '510ml'}
+                onChange={handleVolumeChange}
+              />
+              510ml
+            </label>
+          </div>
           <div className="price-container">
             {discountPrice && (
               <p className="discount-price">
@@ -137,7 +209,6 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
        </div>
        <div className="reviews">
         <h3>Đánh giá sản phẩm</h3>
-        {/* Hiển thị chỉ ba đánh giá đầu tiên (nếu có) */}
         {reviews.length > 0 && (
           <ul>
             {reviews.slice(0, 3).map((review, index) => (
@@ -158,18 +229,15 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
             ))}
           </ul>
         )}
-        {/* Form để thêm một đánh giá mới
         <div className="add-review">
           <textarea
             placeholder="Nhập đánh giá của bạn..."
             rows="4"
-            cols="50"
-            // Bạn có thể sử dụng trạng thái để quản lý nội dung của đánh giá
-          ></textarea>
+            cols="50"          ></textarea>
           <button onClick={() => addReview("Nội dung đánh giá mới")}>
             Thêm đánh giá
           </button>
-        </div> */}
+        </div>
       </div>
 
       <Footer />

@@ -3,9 +3,14 @@
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     font-size: 20px;
+    h4{
+        font-size: 24px;
+        color: #002E5D;
+    }
     
     .finfo-contact {
         grid-column: 4 / 5;
+      
         span{
             margin-right: 5px;
             width: 1rem;
@@ -19,6 +24,8 @@
 
         h5 {
             margin: 0 0;
+            font-size: 20px;
+            color: #002E5D;
         }
 
         ul {
@@ -28,14 +35,17 @@
 
     .finfo-shopping {
         grid-column: 2 / 3;
+        margin-left: -150px;
 
     }
 
     .finfo-about-us {
         grid-column: 1 / 2;
+        margin-left: -100px;
     }
 
     .finfo-link {
         grid-column: 3/4;
+        margin-left: -150px;
     }
 }

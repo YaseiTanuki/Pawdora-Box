@@ -46,10 +46,8 @@ const LoginForm = () => {
                 <input type="email" placeholder="Email" />
             </div>
                 <div className="password-input-container">
-                    <div className="pass">
                     <FontAwesomeIcon icon={faLock} className="lock-icon" />
                     <input placeholder="Mật khẩu" type={showPassword ? "text" : "password"} />
-                    </div>
                     <FontAwesomeIcon
                         icon={showPassword ? faEye : faEyeSlash}
                         onClick={togglePasswordVisibility}
@@ -76,7 +74,7 @@ const LoginForm = () => {
             </button>
             <p className="notaccount">Bạn chưa có tài khoản? &nbsp;
                 <NavLink to="/register" className="NavLink">
-                    <span> Đăng ký ngay</span>
+                    <strong> Đăng ký ngay</strong>
                 </NavLink>
             </p>
         </article>
