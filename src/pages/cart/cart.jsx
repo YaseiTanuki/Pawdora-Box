@@ -8,6 +8,7 @@ import Footer from "../../components/big_components/footer/footer"
 import { productsData } from "../product_page/product_page"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './cart.scss'
+import { useNavigate } from "react-router-dom"
 
 const CartPage = () => {
 
@@ -60,6 +61,12 @@ const CartPage = () => {
     if(totalPrice!= total)
         setTotalPrice(total);
 
+    const navigate = useNavigate();
+
+    const toPay = () => {
+        navigate("/subcartpage")
+    }
+
     return (
         <>
         <Header showNav={true}/>
@@ -79,7 +86,7 @@ const CartPage = () => {
                         <li>Hỗ trợ đổi hàng trong vòng 7 ngày tại tất cả các cửa hàng trên toàn quốc.</li>
                         <li>Miễn phí ship với đơn hàng từ 500.000đ.</li>
                     </ul>
-                    <button className="pay-button">Thanh toán</button>
+                    <button className="pay-button" onClick={toPay}>Thanh toán</button>
                 </article>
             </section>
         </section>
