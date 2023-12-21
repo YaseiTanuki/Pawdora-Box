@@ -74,12 +74,12 @@ const CartPage = () => {
             </section>
             <section className="total">
                 <article className="total-detail-container">
-                    <h1><span className="not-red">Tổng tiền:</span> {totalPrice}</h1>
+                    <h1><span className="not-red">Tổng tiền:</span> <span>đ{totalPrice}</span></h1>
                     <ul>
                         <li>Hỗ trợ đổi hàng trong vòng 7 ngày tại tất cả các cửa hàng trên toàn quốc.</li>
                         <li>Miễn phí ship với đơn hàng từ 500.000đ.</li>
                     </ul>
-                    <button>Thanh toán</button>
+                    <button className="pay-button">Thanh toán</button>
                 </article>
             </section>
         </section>

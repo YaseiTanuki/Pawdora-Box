@@ -45,7 +45,7 @@
         .total-detail-container {
             margin-top: 60px;
             border: 1px solid #ccc;
-            max-width: 500px;
+            width: 300px;
             padding: 20px;
 
             h1{
@@ -53,6 +53,22 @@
                 .not-red {
                     color:black
                 }
+
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .pay-button {
+                width: 80%;
+                height: 50px;
+                border-radius: 10px;
+                background-color: #003c6a;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                margin-left: 10%;
             }
 
         }
