@@ -3,14 +3,19 @@ import "./delivery_info.scss"
 const DeliveryInfo = (props) => {
     return (
         <article className="delivery-info">
-            <h3>Họ và tên</h3>
-            <p>{props.name}</p>
-            <h3>Địa chỉ</h3>
-            <p>{props.address}</p>
-            <h3>Số điện thoại</h3>
-            <p>{props.phoneNumber}</p>
-            <h3>Ghi chú</h3>
-            <p>{props.note}</p>
+            <form action="">
+                <input type="text" placeholder="Ho va Ten"/>
+                <input type="text" placeholder="Email"/>
+                <input type="text" placeholder="So Dien Thoai"/>
+                <input type="text" placeholder="Tinh / Thanh pho"/>
+                <input type="text" placeholder="Quan"/>
+                <input type="text" placeholder="Xa"/>
+                <input type="text" placeholder="So nha"/>
+                <label htmlFor="">Phuong thuc thanh toan</label>
+                <select name="" id="">
+                    <option value="Hehe"></option>
+                </select>
+            </form>
         </article>
     )
 }

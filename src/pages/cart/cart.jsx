@@ -1,18 +1,19 @@
 import Header from "../../components/big_components/header/header"
 import "./cart.scss"
-import Cart from './../../components/small_components/cart/cart/cart'
 import Footer from "../../components/big_components/footer/footer"
+function CartPage() {
 
-const CartPage = () => {
     return (
-        <>
+        <section className="cart-page">
             <Header/>
-            <main className="cart">
-                <div className="cart-container"><Cart/></div>
-            </main>
+            <article>
+                <ul>
+
+                </ul>
+            </article>
             <Footer/>
-        </>
-    )
+        </section>
+    );
 }
 
 export default CartPage
