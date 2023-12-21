@@ -9,11 +9,11 @@
 
 .cart-list-container {
     grid-column: 2 / 6;
-
+    
     ul {
         list-style: none;
-        border: 1px solid #ccc;
         padding: 15px;
+        border: 1px solid #ccc;
         li {
             border-bottom: 1px solid #ccc;
             padding-bottom: 10px;

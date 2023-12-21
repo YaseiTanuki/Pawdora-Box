@@ -76,6 +76,7 @@ const CartPage = () => {
         <>
         <Header showNav={true}/>
         <section className="cart-page">
+            
             <section className="cart-list-container">
                 <h3>Giỏ hàng</h3>
                 <ul className="cart-list">

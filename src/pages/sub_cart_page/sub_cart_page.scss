@@ -12,3 +12,22 @@
         margin-bottom: 10px;
     }
 }
+
+.dealer {
+    margin-left: 10%;
+    width: 80%;
+
+    input {
+        width: 50%;
+        height: 40px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        border: 1px solid #ccc;
+        height: 45px;
+        width: 30%;
+        background-color: #003c6a;
+        color: white;
+    }
+}

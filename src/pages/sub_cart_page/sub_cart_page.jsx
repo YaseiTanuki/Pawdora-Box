@@ -11,6 +11,15 @@ const SubCartPage = () => {
 
     const {payProduct, setPayProduct} = useContext(PayContext)
 
+    const Dealer = () =>{
+        return (
+            <article className="dealer">
+                <input type="text" placeholder="Mã giảm giá"/>
+                <button>Sử dụng</button>
+            </article>
+        )
+    }
+
     const CartProductDisplay = (props) => {
         return(
             <article className="cart-item">
@@ -37,6 +46,7 @@ const SubCartPage = () => {
                         <li><CartProductDisplay img={item.img} name={item.name} price={item.price}/></li>
                     ))}
                 </ul>
+                <Dealer/>
             </section>
             <article className="delivery">
                 <DeliveryInfo/>
