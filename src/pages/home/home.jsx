@@ -12,6 +12,10 @@ import sale3 from '../../../public/img/home-product/hatkho.jpg'
 import sale4 from '../../../public/img/home-product/lac.png'
 import sale5 from '../../../public/img/home-product/xucxich.png'
 import sale6 from '../../../public/img/home-product/thuoc.png'
+import new1 from '../../../public/img/home-product/banhquy.png'
+import new2 from '../../../public/img/home-product/khan.png'
+import new3 from '../../../public/img/home-product/suatam.png'
+import new4 from '../../../public/img/home-product/banchai.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Value from '../../assets/img/value.png'
 import blog1 from '../../assets/img/blog1.svg'
@@ -100,24 +104,24 @@ const Home = () => {
                     </article>
                     <h3 className="sale-title">Khuyến mãi</h3>
                     <article className="sale2">
-                        <Card img={sale3} name="Thức ăn hạt khô KitchenFlavor Nature Gourmet cho chó" price="40000đ"/>
-                        <Card img={sale4} name="Vòng cổ vải kèm chuông nhiều hoạ tiết" price="40000đ"/>
-                        <Card img={sale5} name="Xúc xích nhiều vị cho chó mèo thanh 15g" price="40000đ"/>
-                        <Card img={sale6} name="Canxi Mỹ PetAg Calcium Phosphorus cho chó mèo" price="40000đ"/>
+                        <Card img={sale3} name="Thức ăn hạt khô KitchenFlavor Nature Gourmet cho chó" price="đ21.0000"/>
+                        <Card img={sale4} name="Vòng cổ vải kèm chuông nhiều hoạ tiết" price="đ35.000"/>
+                        <Card img={sale5} name="Xúc xích nhiều vị cho chó mèo thanh 15g" price="đ20.000"/>
+                        <Card img={sale6} name="Canxi Mỹ PetAg Calcium Phosphorus cho chó mèo" price="đ265.000"/>
                     </article>
                     <h3 className="new-title">Sản phẩm mới</h3>
                     <article className="new">
-                        <Card img={sale3} name="Thức ăn hạt khô KitchenFlavor Nature Gourmet cho chó" price="40000đ"/>
-                        <Card img={sale4} name="Vòng cổ vải kèm chuông nhiều hoạ tiết" price="40000đ"/>
-                        <Card img={sale5} name="Xúc xích nhiều vị cho chó mèo thanh 15g" price="40000đ"/>
-                        <Card img={sale6} name="Bánh sữa dê bổ sung dinh dưỡng cho mèo" price="40000đ"/>
+                        <Card img={new1} name="Bánh quy ngũ cốc cho chó mèo" price="đ27.000"/>
+                        <Card img={new2} name="Khăn tắm siêu thấm hút cho chó mèo" price="đ40.000"/>
+                        <Card img={new3} name="Bánh sữa dê bổ sung dinh dưỡng cho chó mèo" price="đ40.000"/>
+                        <Card img={new4} name="Bàn chải cao su tắm mát xa cho chó mèo" price="đ40.000"/>
                     </article>
                     <h3 className="love-title">Được ưa thích</h3>
                     <article className="love">
-                        <Card img={sale3} name="Thức ăn hạt khô KitchenFlavor Nature Gourmet cho chóo" price="40000đ"/>
-                        <Card img={sale4} name="Vòng cổ vải kèm chuông nhiều hoạ tiết" price="40000đ"/>
-                        <Card img={sale5} name="Xúc xích nhiều vị cho chó mèo thanh 15g" price="40000đ"/>
-                        <Card img={sale6} name="Canxi Mỹ PetAg Calcium Phosphorus cho chó mèo" price="40000đ"/>
+                        <Card img={new1} name="Bánh quy ngũ cốc cho chó mèo" price="đ27.000"/>
+                        <Card img={sale6} name="Canxi Mỹ PetAg Calcium Phosphorus cho chó mèo" price="đ265.000"/>
+                        <Card img={new4} name="Bàn chải cao su tắm mát xa cho chó mèo" price="đ40.000"/>
+                        <Card img={sale3} name="Thức ăn hạt khô KitchenFlavor Nature Gourmet cho chó" price="đ21.000"/>
                     </article>
                 </section>
                 <article className="value">
