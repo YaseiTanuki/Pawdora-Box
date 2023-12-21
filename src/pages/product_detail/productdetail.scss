@@ -157,12 +157,13 @@
 
 .reviews{
   grid-column: 2/11;
+  margin-bottom: 30px;
   .rating-summary {
     display: grid;
     width: 1000px;
     align-items: center;
     flex-wrap: wrap; 
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 45px;
     padding: 20px 40px;
     border: 1px solid rgb(193, 193, 193);
@@ -228,19 +229,124 @@
 }
 
 .add-review{
+  margin-top: -20px;
   margin-left: 38px;
   margin-bottom: 30px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   textarea{
     border: 1px solid rgb(191, 190, 190);
     border-radius: 5px;
+
   }
- 
-  button{
-   background-color: #002E5D;
-   color: white;
-   padding: 5px 4px;
-   border-radius: 4px;
-   border-color: white;
-  }
+
+  textarea::placeholder {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+  .button{
+    height: 50px;
+    margin-top: 23px;
+    margin-left: 20px;
+    button{
+    background-color: #002E5D;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 7px;
+    border-color: white;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    }
+    button:hover{
+      background-color: #898989;
+    }
+}
     
 }
+
+.similar-products{
+  grid-column: 2/12;
+  margin-bottom: 30px;
+  h3{
+    font-size: 24px;
+    color: #002E5D;
+  }
+ .similar-products-list{
+  display: flex;
+  flex-wrap: wrap;
+ 
+  .product {
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 18rem;
+    height: 21rem;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    article{
+    h4{
+      margin: 5px 0;
+      width: 220px;
+      margin-left: 35px;
+      color:#002E5D;
+      height: 37px;
+    }
+    img {
+      max-width: 100%;
+      height: 200px;
+      border-radius: 5px;
+    }
+    button{
+      background-color: #003c6a;
+      color:white;
+      margin-left: 4px;
+      border: 1px solid rgb(210, 210, 210);
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 8px 16px;
+      &:hover{
+        background-color: #2c88cf;
+        color: black;
+        
+      }
+    }
+    .add-to-cart-button{
+      background-color: #E4EEFA;
+      color: black;
+      padding: 6px 39px 8px 38px;
+      font-size: 15px;
+    }
+    .price-container{
+      .discount-price{
+        margin: 0 0;
+        margin-top: 8px;
+        margin-bottom: 10px;
+      .discounted{
+        font-size: 20px;
+        color:red;
+        font-weight: bold;
+      }
+      .original{
+        margin-left: 20px;
+        text-decoration: line-through;
+      }
+    }
+    }
+    .added-to-cart-message{
+      color: #003c6a;
+      font-size: 10px;
+      margin-block-start: 7px;
+    }
+  }
+  }
+}
+}
+
+

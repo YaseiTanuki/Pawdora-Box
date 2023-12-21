@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './productdetail.scss';
@@ -7,10 +7,82 @@ import Footer from '../../components/big_components/footer/footer';
 import { faStar, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { productsData } from '../product_page/product_page';
+
+const filterSimilarProducts = (currentProduct, allProducts) => {
+  // Giả sử bạn muốn lọc sản phẩm có cùng loại
+  const similarProducts = allProducts.filter(product => product.category === currentProduct.category);
+
+  // Loại bỏ sản phẩm hiện tại khỏi danh sách sản phẩm tương tự
+  const filteredProducts = similarProducts.filter(product => product.id !== currentProduct.id);
+
+  // Giả sử bạn chỉ muốn hiển thị một số lượng cố định sản phẩm tương tự
+  const maxSimilarProducts = 4;
+  return filteredProducts.slice(0, maxSimilarProducts);
+};
+
+const RelatedProduct = ({ product, onAddToCart, onBuyNow, showAddedToCartMessage }) => {
+  const { id, name, price, price2, discountPrice, img } = product;
+
+  const formatPrice = (amount) => {
+    return `đ${new Intl.NumberFormat('vi-VN').format(amount)}`;
+  };
+
+  const handleAddToCart = () => {
+    // Thực hiện thêm vào giỏ hàng
+    onAddToCart(id);
+
+    // Hiển thị thông báo
+    showAddedToCartMessage(true);
+
+    // Ẩn thông báo sau một khoảng thời gian (ví dụ: 3 giây)
+    setTimeout(() => {
+      showAddedToCartMessage(false);
+    }, 3000);
+  };
+  const handleProductClick = () => {
+    setProductID(productID + 1);
+    navigator('/' + id + '/detail');
+  };
+
+
+  return (
+    <div className="product">
+      <article className="product-click" onClick={handleProductClick}>
+      <img src={img} alt={name}/>
+      <h4>{name}</h4>
+      <div className="price-container">
+        {discountPrice && (
+          <p className="discount-price">
+            <span className="discounted">{formatPrice(discountPrice)}</span>
+            <span className="original">{formatPrice(price)}</span>
+          </p>
+        )}
+        {!discountPrice && <p>{formatPrice(price)}</p>}
+      </div>
+      </article>
+      <article>
+      <button onClick={handleAddToCart} className="add-to-cart-button">
+        <FontAwesomeIcon icon={faCartPlus} />
+      </button>
+      <a href={`/product/${id}`} className="buy-now-button" onClick={() => onBuyNow(id)}>
+        <button>
+         Mua ngay
+        </button>
+      </a>
+
+      {showAddedToCartMessage && (
+        <div className="added-to-cart-message">Đã thêm vào giỏ hàng!</div>
+      )}
+      </article>
+    </div>
+  );
+};
 
 const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
   const { id, name, price, price2, discountPrice, img, description, additionalInfo, img1, rating, numSold, numReviews, detail1, detail2, detail3 } = product;
   const [showAddedToCartMessage, setShowAddedToCartMessage] = useState(false);
+  
   const [newReviewContent, setNewReviewContent] = useState('');
   const handleAddToCart = () => {
     // Thực hiện thêm vào giỏ hàng
@@ -25,6 +97,7 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
     }, 3000);
   };
   // Trạng thái cho đánh giá
+  const [newReviews, setNewReviews] = useState([]);
 
   const [reviews, setReviews] = useState([
     {
@@ -55,17 +128,28 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
   };
 
   const addReview = () => {
+    console.log('Thêm đánh giá:', newReviewContent);
+
+    if (!newReviewContent.trim()) {
+      console.log('Nội dung đánh giá trống. Không thêm.');
+      return;
+    }
+
     const newReview = {
       author: 'Người dùng mới',
-      rating: 5, // Có thể lấy từ người dùng
       date: new Date().toLocaleString(),
-      classification: 'Loại sản phẩm', // Có thể lấy từ người dùng
       content: newReviewContent,
     };
 
-    setReviews([...reviews, newReview]);
-    setNewReviewContent(''); // Reset nội dung đánh giá sau khi thêm
+    console.log('Đánh giá mới:', newReview);
+
+    // Thêm đánh giá mới vào mảng newReviews
+    setNewReviews((prevReviews) => [newReview, ...prevReviews]);
+
+    // Đặt lại nội dung đánh giá sau khi thêm
+    setNewReviewContent('');
   };
+  
   const formatPrice = (amount) => {
     return `đ${new Intl.NumberFormat('vi-VN').format(amount)}`;
   };
@@ -97,7 +181,7 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
   const handleVolumeChange = (event) => {
     setSelectedVolume(event.target.value);
   };
-
+  const similarProducts = filterSimilarProducts(product, productsData);
   return (
     <>
       <Header showNav={true} />
@@ -241,45 +325,72 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
           <p >Có ảnh/video (200)</p></div>
           </div>
         </div>
-        {reviews.length > 0 && (
-          <ul>
-            {reviews.slice(0, 3).map((review, index) => (
-              <li key={index}>
-                <FontAwesomeIcon icon={faUser} className="user-icon" />
-                <strong>{review.author}</strong>
-                <p>
-                {[...Array(5)].map((_, i) => (
-                  <FontAwesomeIcon
-                    key={i}
-                    icon={faStar}
-                    className={`star-icon ${i < review.rating ? 'filled' : ''}`}
+            {reviews.length > 0 && (
+              <ul>
+                {newReviews.length > 0 && (
+                  <div className="new-reviews">
+                    <li>
+                      {newReviews.map((review, index) => (
+                        <li key={index}>
+                          <FontAwesomeIcon icon={faUser} className="user-icon" />
+                          <strong>{review.author}</strong>
+                          <p className="reviewdate">{review.date}</p>
+                          <p>{review.content}</p>
+                        </li>
+                      ))}
+                    </li>
+                  </div>
+                )}
+                {reviews.slice(0, 4).map((review, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faUser} className="user-icon" />
+                    <strong>{review.author}</strong>
+                    <p>
+                    {[...Array(5)].map((_, i) => (
+                      <FontAwesomeIcon
+                        key={i}
+                        icon={faStar}
+                        className={`star-icon ${i < review.rating ? 'filled' : ''}`}
+                      />
+                    ))}</p>
+                    <p className='reviewdate'>{review.date} | Phân loại hàng: {review.classification}</p>
+                    <p>{review.content}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
+           <div className="add-review">
+                <textarea
+                  placeholder="Nhập đánh giá của bạn..."
+                  rows="2"
+                  cols="130" 
+                  value={newReviewContent}  // Đảm bảo giá trị được bind với state
+                  onChange={(e) => setNewReviewContent(e.target.value)}
+                  className='text'></textarea>
+                  <div className='button'>
+                <button onClick={addReview}>
+                  Đánh giá
+                </button></div>
+              </div>
+            </div>
+            <div className="similar-products">
+              <h3>Sản phẩm tương tự</h3>
+              <div className="similar-products-list">
+                {similarProducts.map((similarProduct) => (
+                  <RelatedProduct
+                    key={similarProduct.id}
+                    product={similarProduct}
+                    onAddToCart={onAddToCart}
+                    onBuyNow={onBuyNow}
+                    showAddedToCartMessage={showAddedToCartMessage}
                   />
-                ))}</p>
-                <p className='reviewdate'>{review.date} | Phân loại hàng: {review.classification}</p>
-                <p>{review.content}</p>
-              </li>
-            ))}
-          </ul>
-        )}
-        <div className="add-review">
-          <textarea
-            placeholder="Nhập đánh giá của bạn..."
-            rows="2"
-            cols="150" className='text'></textarea>
-          <button onClick={() => addReview("Nội dung đánh giá mới")}>
-            Thêm đánh giá
-          </button>
-        </div>
-      </div>
+                ))}
+              </div>
+            </div>
 
       <Footer />
     </>
   );
-};
-ProductDetail.propTypes = {
-  product: PropTypes.object.isRequired,
-  onAddToCart: PropTypes.func.isRequired,
-  onBuyNow: PropTypes.func.isRequired,
 };
 
 export default ProductDetail;
