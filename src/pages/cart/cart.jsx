@@ -9,6 +9,7 @@ import { productsData } from "../product_page/product_page"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './cart.scss'
 import { useNavigate } from "react-router-dom"
+import PayContext from "../../../hooks/pay_context"
 
 const CartPage = () => {
 
@@ -16,6 +17,7 @@ const CartPage = () => {
     const {cartProduct, setCartProduct} = useContext(cartContext)
 
       const [cartList, setCartList] = useState([])
+      const {payProduct, setPayProduct} = useContext(PayContext)
       const CartProductDisplay = (props) => {
         return(
             <article className="cart-item">
@@ -50,6 +52,9 @@ const CartPage = () => {
         if(cartList.length != newList.length)
             setCartList(newList)
     }
+
+    if(cartList != payProduct)
+        setPayProduct(cartList)
 
     const [totalPrice, setTotalPrice] = useState(0)
     let total = 0

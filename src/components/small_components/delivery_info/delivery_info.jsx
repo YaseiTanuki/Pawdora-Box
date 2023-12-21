@@ -3,19 +3,21 @@ import "./delivery_info.scss"
 const DeliveryInfo = (props) => {
     return (
         <article className="delivery-info">
+            <p>Thông tin giao hàng</p>
             <form action="">
-                <input type="text" placeholder="Ho va Ten"/>
+                <input className="full" type="text" placeholder="Họ và Tên"/>
                 <input type="text" placeholder="Email"/>
-                <input type="text" placeholder="So Dien Thoai"/>
-                <input type="text" placeholder="Tinh / Thanh pho"/>
-                <input type="text" placeholder="Quan"/>
-                <input type="text" placeholder="Xa"/>
-                <input type="text" placeholder="So nha"/>
-                <label htmlFor="">Phuong thuc thanh toan</label>
-                <select name="" id="">
+                <input type="text" placeholder="Số điện thoại"/>
+                <input type="text" placeholder="Tỉnh / Thành phố"/>
+                <input type="text" placeholder="Quận"/>
+                <input type="text" placeholder="Xã"/>
+                <input type="text" placeholder="Số nhà"/>
+                <label htmlFor="">Phương thức thanh toán</label>
+                <select className="full" name="" id="">
                     <option value="Hehe"></option>
                 </select>
             </form>
+            <button className="end-button">Đặt hàng</button>
         </article>
     )
 }

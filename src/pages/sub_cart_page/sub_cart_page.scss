@@ -4,6 +4,11 @@
     grid-template-columns: subgrid;
     
     .delivery {
-        grid-column: 8/13;
+        margin-top: 45px;
+        grid-column: 7/13;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+        margin-bottom: 10px;
     }
 }
