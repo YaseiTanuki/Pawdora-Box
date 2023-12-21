@@ -1,6 +1,14 @@
 import "./delivery_info.scss"
+import { useNavigate } from "react-router-dom"
 
 const DeliveryInfo = (props) => {
+
+    const navigate = useNavigate()
+
+    const toThanks = () => {
+        navigate("/thanks")
+    }
+
     return (
         <article className="delivery-info">
             <p>Thông tin giao hàng</p>
@@ -17,7 +25,7 @@ const DeliveryInfo = (props) => {
                     <option value="Hehe"></option>
                 </select>
             </form>
-            <button className="end-button">Đặt hàng</button>
+            <button onClick={toThanks} className="end-button">Đặt hàng</button>
         </article>
     )
 }
