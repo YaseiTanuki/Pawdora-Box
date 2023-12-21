@@ -3,19 +3,77 @@
     display: grid;
     grid-template-columns: subgrid;
     
+    h3{
+        grid-column: 2 / 13;
+        grid-row: 2 / 3;
+    }
+
     .delivery {
-        margin-top: 45px;
         grid-column: 7/13;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         max-width: 600px;
         margin-bottom: 10px;
     }
+
+    .cart-list-container {
+        grid-column: 2 / 6;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        
+        ul {
+            list-style: none;
+            padding: 15px;
+            li {
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                .cart-item  {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        max-width: 100px;
+                    }
+    
+                    .detail-container {
+                        margin-left: 30px;
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+    
+                        .price {
+                            h3 {
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .fee, .fee2 {
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .fee2{
+            font-size: 24px;
+            font-weight: bold;
+            .red {
+                color: red;
+            }
+        }
+    }
 }
 
 .dealer {
+    margin-top: -20px;
     margin-left: 10%;
     width: 80%;
+    margin-bottom: 20px;
 
     input {
         width: 50%;
