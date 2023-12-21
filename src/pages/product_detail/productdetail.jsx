@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './productdetail.scss';
 import Header from '../../components/big_components/header/header';
 import Footer from '../../components/big_components/footer/footer';
@@ -10,6 +11,7 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
   const { id, name, price, price2, discountPrice, img, description, additionalInfo, img1, rating, numSold, numReviews, detail1, detail2, detail3 } = product;
   const [showAddedToCartMessage, setShowAddedToCartMessage] = useState(false);
+  const [newReviewContent, setNewReviewContent] = useState('');
   const handleAddToCart = () => {
     // Thực hiện thêm vào giỏ hàng
     onAddToCart(id);
@@ -48,10 +50,22 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
     },
   ]);
 
-  const addReview = (newReview) => {
-    setReviews([...reviews, newReview]);
+  const handleBuyNow = () => {
+    onBuyNow(id);
   };
 
+  const addReview = () => {
+    const newReview = {
+      author: 'Người dùng mới',
+      rating: 5, // Có thể lấy từ người dùng
+      date: new Date().toLocaleString(),
+      classification: 'Loại sản phẩm', // Có thể lấy từ người dùng
+      content: newReviewContent,
+    };
+
+    setReviews([...reviews, newReview]);
+    setNewReviewContent(''); // Reset nội dung đánh giá sau khi thêm
+  };
   const formatPrice = (amount) => {
     return `đ${new Intl.NumberFormat('vi-VN').format(amount)}`;
   };
@@ -186,12 +200,9 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
             <button onClick={handleAddToCart} className="add-to-cart-button">
               <FontAwesomeIcon icon={faCartPlus} />
             </button>
-            <a href={`/product/${id}`} onClick={() => onBuyNow(id)}>
-              <button  className="buy-now-button">
-              Mua ngay
-              </button>
-            </a>
-
+            <Link to={`/product/${id}`} onClick={handleBuyNow}>
+              <button className="buy-now-button">Mua ngay</button>
+            </Link>
             {showAddedToCartMessage && (
               <div className="added-to-cart-message">Đã thêm vào giỏ hàng!</div>
             )}
@@ -209,6 +220,27 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
        </div>
        <div className="reviews">
         <h3>Đánh giá sản phẩm</h3>
+        <div className="rating-summary">
+          <div className='hd'>
+          <p>{product.rating}/5</p>
+          {[...Array(5)].map((_, index) => (
+              <FontAwesomeIcon key={index} icon={faStar} className={`star-icon ${index < rating ? 'filled' : ''}`} />
+            ))}
+          </div>
+          <div className='ft'> 
+          <div className='danhgia'>
+          <p>Tất cả</p>
+          <p>5 Sao (1k8)</p>
+          <p>4 Sao (200)</p>
+          <p>3 Sao (30)</p>
+          <p>2 Sao (0)</p>
+          <p>1 Sao (0)</p>
+          <p>Có bình luận (500)</p>
+          </div>
+          <div className='video'>
+          <p >Có ảnh/video (200)</p></div>
+          </div>
+        </div>
         {reviews.length > 0 && (
           <ul>
             {reviews.slice(0, 3).map((review, index) => (
@@ -232,8 +264,8 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
         <div className="add-review">
           <textarea
             placeholder="Nhập đánh giá của bạn..."
-            rows="4"
-            cols="50"          ></textarea>
+            rows="2"
+            cols="150" className='text'></textarea>
           <button onClick={() => addReview("Nội dung đánh giá mới")}>
             Thêm đánh giá
           </button>
@@ -243,6 +275,11 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
       <Footer />
     </>
   );
+};
+ProductDetail.propTypes = {
+  product: PropTypes.object.isRequired,
+  onAddToCart: PropTypes.func.isRequired,
+  onBuyNow: PropTypes.func.isRequired,
 };
 
 export default ProductDetail;

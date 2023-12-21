@@ -48,7 +48,7 @@
 }
 
 .content{
-  margin-inline-start: 125px;
+  margin-inline-start: 110px;
   .options{
     p{
       margin:0;
@@ -157,6 +157,51 @@
 
 .reviews{
   grid-column: 2/11;
+  .rating-summary {
+    display: grid;
+    width: 1000px;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin-top: 50px;
+    margin-left: 45px;
+    padding: 20px 40px;
+    border: 1px solid rgb(193, 193, 193);
+   
+    .hd{
+      grid-column: 1/2;
+      p{
+        font-size: 18px;
+        font-weight: bold;
+        width: 80px;
+      }
+    }
+    .ft{
+      grid-column: 2/auto;
+      margin-left: -6px;
+      grid-template-rows: 2, 40px;
+      p{
+        border-radius: 5px;
+        border: 1px solid rgb(193, 193, 193);
+        padding: 5px 10px;
+        height: 15px;
+      }
+      .danhgia{
+        display: flex;
+        gap:30px;
+        grid-row: 1/2;
+      }
+      .video{
+        grid-row: 2/3;
+        width: 150px;
+        margin-top: 10px;
+      }
+
+    }
+    p{
+      margin: 0;
+    }
+  }
+
   h3{
     margin: 20px 0 0 0;
     color:#002E5D;
@@ -180,4 +225,22 @@
   p{
     margin-left: 20px;
   }
+}
+
+.add-review{
+  margin-left: 38px;
+  margin-bottom: 30px;
+  textarea{
+    border: 1px solid rgb(191, 190, 190);
+    border-radius: 5px;
+  }
+ 
+  button{
+   background-color: #002E5D;
+   color: white;
+   padding: 5px 4px;
+   border-radius: 4px;
+   border-color: white;
+  }
+    
 }
