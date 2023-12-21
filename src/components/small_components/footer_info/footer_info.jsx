@@ -20,7 +20,7 @@ const FooterInfo = () => {
                 <p>Dịch vụ</p>
                 <p>Đánh giá</p>
             </article>
-            <article className="finfo-LINK">
+            <article className="finfo-link">
                 <h4>LIÊN KẾT</h4>
                 <p>Trang chủ</p>
                 <p>Sản phẩm</p>

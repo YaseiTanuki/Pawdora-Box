@@ -24,22 +24,24 @@
 }
 
 .small-logo {
+    display: flex;
     min-width: 2rem;
     min-height: 5rem;
-    background-image: url(/img/logo.svg);
+    background-image: url(/img/logo.png);
     background-repeat: no-repeat;
     background-size: 5rem auto;
     padding-left: 8.5rem;
     background-position:5% 10%;
     width: 17rem;
-
-
+    align-items: center;
+    
     .site-name {
         font-family: "Inter";
         font-size: 2rem;
         text-decoration: none;
         color: #002E5D;
         font-weight: bold;
+
     }
 
     p {

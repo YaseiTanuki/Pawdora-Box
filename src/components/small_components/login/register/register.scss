@@ -23,6 +23,7 @@
             font-size: 2rem;
         
             color: #002E5D;
+            font-weight: bold;
         
         }
 
@@ -39,7 +40,7 @@
         width: 100%;
         margin-left: 150px;
         label, input {
-            margin: 1rem 1rem 1rem 0;
+            margin: 1rem 1rem 1rem 1rem;
         
         }
 
@@ -63,20 +64,13 @@
             }
         }
 
-        input::placeholder {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 25px;
-        }
-
         .password-input-container{
             position: relative;
 
             .eye-icon {
                 position: absolute;
                 top: 50%;
-                right: 9rem;
+                right: 10rem;
                 transform: translate(0, -50%);
                 cursor: pointer;
             }
