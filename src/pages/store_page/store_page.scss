@@ -1,0 +1,37 @@
+.store-page {
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    .store-list-container {
+        grid-column: 2 / 8;
+        .store-list {
+            list-style: none;
+            border: 1px solid black;
+            max-width: 600px;
+
+            li {
+                max-width: 500px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+
+    .map-container {
+        grid-column: 8 / 13;
+
+        img {
+            padding-top: 50px;
+            max-height: 550px;
+            width: 550px;
+        }
+    }
+}
+
+.store {
+    p {
+        margin-top: 3px;
+        display: inline-block;
+    }
+}

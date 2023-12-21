@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./location_link.scss"
+import { NavLink } from "react-router-dom"
 
 const LocationLink = () => {
     return (
-        <a className="location-link" href=""><FontAwesomeIcon icon="location-dot" fixedWidth/>Tìm kiếm cửa hàng</a>
+        <NavLink to="/store" className="location-link" href=""><FontAwesomeIcon icon="location-dot" fixedWidth/>Tìm kiếm cửa hàng</NavLink>
     )
 }
 

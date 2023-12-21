@@ -15,6 +15,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import CartPage from './pages/cart/cart';
 import UserPage from "./pages/user/user"
 import SubCartPage from "./pages/sub_cart_page/sub_cart_page"
+import StorePage from "./pages/store_page/store_page"
 
 function App() {
   const {productID, setProductID} = useContext(ProductContext)
@@ -45,6 +46,7 @@ function App() {
         <Route path="/:id/detail"  element={<ProductDetail product={productsData[viewProductID]}/>}/>
         <Route path="/user-info" element={<UserPage />} />
         <Route path="/subcartpage" element={<SubCartPage />} />
+        <Route path="/store" element={<StorePage />} />
       </Routes>
     </>
   )
