@@ -17,6 +17,9 @@ import main8 from '../../../public/img/home-product/khan.png'
 import main9 from '../../../public/img/home-product/banhquy2.png'
 import main10 from '../../../public/img/home-product/batan.png'
 import main11 from '../../../public/img/home-product/banchai.png'
+import { useContext } from 'react';
+import CartContext from '../../../hooks/cart_context';
+
 const productsData = [
   { id: 1, name: 'Sữa tắm JOYCE & DOLLS hương trà xanh cho chó mèo', category: '', price: 200000,price2:'175000', img: productImage, discountPrice: 170000, img1: main1_1, rating: 4.8, numReviews: 2000, numSold: 1000, quantity: 0, detail1:'Với công thức dạng đậm đặc, nên sử dụng pha loãng 6 – 8 lần.', detail2:'Trong môt cái bình không, cho một phần sữa tắm vào, thêm 6 – 8 phần nước sạch vào pha loãng.',detail3:'Xịt trực tiếp sữa tắm sau khi được pha loãng lên lông chó đã được làm ướt, nhẹ nhàng xoa đều.' },
   { id: 2, name: 'Yếm cổ đáng yêu cho chó mèo', category: 'Phụ kiện', price: 50000, price2:40000, img: main2, discountPrice: 35000, img1: main1_1, rating: 4.8, numReviews: 2000, numSold: 1000, quantity: 0 ,detail1:'Yếm cổ hoạ tiết dễ thương cho chó mèo. ', detail2:'Màu sắc đa dạng, thiết kế bắt mắt. ',detail3:'Có dây buộc tiện lợi, tăng thêm vẻ đáng yêu cho thú cưng của bạn.'},
@@ -66,6 +69,8 @@ const ProductPage = () => {
   const [sortBy, setSortBy] = useState('Giá tăng dần');
   const [currentPage, setCurrentPage] = useState(1);
 
+  const {cartProduct, setCartProduct} = useContext(CartContext)
+
   const itemsPerPage = 9;
   const sortedProducts = [...productsData].sort((a, b) => {
     switch (sortBy) {
@@ -104,6 +109,9 @@ const ProductPage = () => {
   };
 
   const handleAddToCart = (productId) => {
+    var newCartProduct = cartProduct
+    newCartProduct.push(productId)
+    setCartProduct(newCartProduct)
     // Thêm logic để xử lý thêm vào giỏ hàng
     console.log(`Thêm sản phẩm có ID ${productId} vào giỏ hàng`);
   };
