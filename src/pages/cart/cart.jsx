@@ -6,15 +6,29 @@ import main1 from '../../../public/img/home-product/hatkho.jpg'
 import Header from "../../components/big_components/header/header"
 import Footer from "../../components/big_components/footer/footer"
 import { productsData } from "../product_page/product_page"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import './cart.scss'
 
 const CartPage = () => {
+
 
     const {cartProduct, setCartProduct} = useContext(cartContext)
 
       const [cartList, setCartList] = useState([])
       const CartProductDisplay = (props) => {
         return(
-            <h1>{props.id}</h1>
+            <article className="cart-item">
+                <img src={props.img} alt="" />
+                <article className="detail-container">
+                    <article className="product-name">
+                        <h4>{props.name}</h4>
+                        <button><FontAwesomeIcon icon="trash" /></button>
+                    </article>
+                    <article className="price">
+                        <h3>{props.price}đ</h3>
+                    </article>
+                </article>
+            </article>
         )
       }
 
@@ -36,18 +50,38 @@ const CartPage = () => {
             setCartList(newList)
     }
 
+    const [totalPrice, setTotalPrice] = useState(0)
+    let total = 0
+    for(let j = 0; j < cartList.length; j++)
+    {
+        total = total + cartList[j].price
+    }
+
+    if(totalPrice!= total)
+        setTotalPrice(total);
+
     return (
         <>
         <Header showNav={true}/>
         <section className="cart-page">
-        <section className="cart-list-container">
-            <h3>Giỏ hàng</h3>
-            <ul className="cart-list">
-                {cartList.map((item) => (
-                    <li><CartProductDisplay id={item.id}/></li>
-                ))}
-            </ul>
-        </section>
+            <section className="cart-list-container">
+                <h3>Giỏ hàng</h3>
+                <ul className="cart-list">
+                    {cartList.map((item) => (
+                        <li><CartProductDisplay img={item.img} name={item.name} price={item.price}/></li>
+                    ))}
+                </ul>
+            </section>
+            <section className="total">
+                <article className="total-detail-container">
+                    <h1><span className="not-red">Tổng tiền:</span> {totalPrice}</h1>
+                    <ul>
+                        <li>Hỗ trợ đổi hàng trong vòng 7 ngày tại tất cả các cửa hàng trên toàn quốc.</li>
+                        <li>Miễn phí ship với đơn hàng từ 500.000đ.</li>
+                    </ul>
+                    <button>Thanh toán</button>
+                </article>
+            </section>
         </section>
         <Footer/>
     </>
