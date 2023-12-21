@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import './productdetail.scss';
 import Header from '../../components/big_components/header/header';
 import Footer from '../../components/big_components/footer/footer';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,6 +21,35 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
     setTimeout(() => {
       setShowAddedToCartMessage(false);
     }, 3000);
+  };
+  // Trạng thái cho đánh giá
+
+  const [reviews, setReviews] = useState([
+    {
+      author: 'Trần Thị Hải',
+      rating: 5,
+      date: '02-12-2023 14:27',
+      classification: 'Hồng - 350ml',
+      content: 'Sản phẩm tốt lắm shop.',
+    },
+    {
+      author: 'Diệp Hương Giang',
+      rating: 5,
+      date: '12-11-2023 18:27',
+      classification: 'Cam - 510ml',
+      content: 'Sản phẩm tốt lắm shop!',
+    },
+    {
+      author: 'Phan Công Hậu',
+      rating: 4,
+      date: '24-05-2022 09:12',
+      classification: 'Tím - 510ml',
+      content: 'Sản phẩm cũng oke.',
+    },
+  ]);
+
+  const addReview = (newReview) => {
+    setReviews([...reviews, newReview]);
   };
 
   const formatPrice = (amount) => {
@@ -96,7 +125,53 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
             )}
             </article>
         </div>
+        
       </div>
+        <div className="details">
+            <h3>Mô tả sản phẩm</h3>
+            <ul>
+              <li>{detail1}</li>
+              <li>{detail2}</li>
+              <li>{detail3}</li>
+            </ul>
+       </div>
+       <div className="reviews">
+        <h3>Đánh giá sản phẩm</h3>
+        {/* Hiển thị chỉ ba đánh giá đầu tiên (nếu có) */}
+        {reviews.length > 0 && (
+          <ul>
+            {reviews.slice(0, 3).map((review, index) => (
+              <li key={index}>
+                <FontAwesomeIcon icon={faUser} className="user-icon" />
+                <strong>{review.author}</strong>
+                <p>
+                {[...Array(5)].map((_, i) => (
+                  <FontAwesomeIcon
+                    key={i}
+                    icon={faStar}
+                    className={`star-icon ${i < review.rating ? 'filled' : ''}`}
+                  />
+                ))}</p>
+                <p className='reviewdate'>{review.date} | Phân loại hàng: {review.classification}</p>
+                <p>{review.content}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+        {/* Form để thêm một đánh giá mới
+        <div className="add-review">
+          <textarea
+            placeholder="Nhập đánh giá của bạn..."
+            rows="4"
+            cols="50"
+            // Bạn có thể sử dụng trạng thái để quản lý nội dung của đánh giá
+          ></textarea>
+          <button onClick={() => addReview("Nội dung đánh giá mới")}>
+            Thêm đánh giá
+          </button>
+        </div> */}
+      </div>
+
       <Footer />
     </>
   );

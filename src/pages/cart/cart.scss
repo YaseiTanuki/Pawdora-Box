@@ -1,0 +1,14 @@
+.cart {
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    .cart-container {
+        grid-column: 5 / 9;
+        width: 4fr;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}

@@ -5,8 +5,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate  } from 'react-router-dom';
 
 const LoginForm = () => {
+    const navigate = useNavigate();
+    const handleLogin = () => {
+        const authenticatedUser = {
+            id: 1,
+            username: 'Umichan',
+            fullName: 'Trần Thị Hải',
+            email: '21522037@gm.uit.edu.vn',
+            
+          };
+      
+          navigate('/user-info', { state: { user: authenticatedUser } });
+        }
+
     const [showPassword, setShowPassword] = useState(false)
     const [rememberAccount, setRememberAccount] = useState(false)
 
@@ -32,8 +46,10 @@ const LoginForm = () => {
                 <input type="email" placeholder="Email" />
             </div>
                 <div className="password-input-container">
+                    <div className="pass">
                     <FontAwesomeIcon icon={faLock} className="lock-icon" />
                     <input placeholder="Mật khẩu" type={showPassword ? "text" : "password"} />
+                    </div>
                     <FontAwesomeIcon
                         icon={showPassword ? faEye : faEyeSlash}
                         onClick={togglePasswordVisibility}
@@ -55,9 +71,9 @@ const LoginForm = () => {
                     </div> 
                 </div>  
             </form>
-            <NavLink to="/">
-                    <button type="submit">Đăng nhập</button>
-            </NavLink>
+            <button type="submit" onClick={handleLogin}>
+                Đăng nhập
+            </button>
             <p className="notaccount">Bạn chưa có tài khoản? &nbsp;
                 <NavLink to="/register" className="NavLink">
                     <span> Đăng ký ngay</span>

@@ -2,17 +2,23 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    font-size: 20px;
     
     .finfo-contact {
-        grid-column: 3 / 4;
+        grid-column: 4 / 5;
+        span{
+            margin-right: 5px;
+            width: 1rem;
+        }
 
         p {
             padding-left: 13px;
-            margin-top: -12px;
+            margin-top: -23px;
+            display: inline-block;
         }
 
         h5 {
-            margin-bottom: 16px;
+            margin: 0 0;
         }
 
         ul {
@@ -22,14 +28,14 @@
 
     .finfo-shopping {
         grid-column: 2 / 3;
-        margin-left: -10rem;
+
     }
 
     .finfo-about-us {
         grid-column: 1 / 2;
     }
 
-    .finfo-payment-method {
-        grid-column: 4/5;
+    .finfo-link {
+        grid-column: 3/4;
     }
 }

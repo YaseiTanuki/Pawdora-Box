@@ -1,4 +1,5 @@
 /* Thêm nội dung này vào file productdetail.scss hoặc một file SCSS khác */
+
 .product-detail {
   display: flex;
   grid-column: 1/13;
@@ -11,7 +12,7 @@
   margin-top: 20px;
   .image {
     width: 567px; 
-    height: 400px;
+    height: 450px;
   }
 
   .image1 {
@@ -116,4 +117,45 @@
   margin: 0 10px; /* Khoảng cách giữa nút và số lượng */
   font-size: 18px; /* Điều chỉnh kích thước font theo nhu cầu */
 }
+
+}
+.details{
+  grid-column: 2/11;
+  margin: 0 0;
+  h3{
+    margin: 0 0;
+    color:#002E5D;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  li{
+    margin-top: 20px;
+    list-style: none;
+  }
+}
+
+.reviews{
+  grid-column: 2/11;
+  h3{
+    margin: 20px 0 0 0;
+    color:#002E5D;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  li{
+    margin-top: 20px;
+    list-style: none;
+  }
+  .star-icon{
+    color:#ffd700;
+  }
+  strong{
+    margin: 0 10px;
+  }
+  .reviewdate{
+    color: #898989;
+  }
+  p{
+    margin-left: 20px;
+  }
 }

@@ -1,5 +1,5 @@
 header {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(199, 198, 198);
     margin-bottom: 1rem;
     background-color:var(--brand-color);
     grid-column: 1 / 13;
@@ -22,11 +22,21 @@ header {
 
         .site-name {
             grid-row: 2 / 3;
-            grid-column: 1 / 11;
+            grid-column: 1 / 8;
             min-width: 1080px;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
             align-items: center;
+            grid-template-columns: repeat(3,1fr);
+            .button-container{
+                grid-column: 3/4;
+                display: flex;
+                justify-content: center;
+                margin-left: 0px;
+                min-width: fit-content;
+                .login-button-container{
+                    margin-left: 50px;
+                }
+            }
         }  
 
         .navigation {

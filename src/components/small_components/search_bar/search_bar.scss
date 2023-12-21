@@ -1,22 +1,32 @@
 .search-bar {
     display: flex;
+    margin-right: 100px;
 
     input {
-        margin-left: -5vw;
+        margin: 0 100px;
         min-width: 30rem;
-        width: 30vw;
-        border-radius: 1rem;
+        width: 35vw;
+        border-radius: 1.2rem;
         min-height: 2rem;
+        border: 0.5px solid rgb(151, 151, 151);
+        height: 38px;
+    }
+    input::placeholder {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25px;
     }
 
     button {
         background-color: white;
         width: 2rem;
-        height: 2rem;
+        height: 1.5rem;
         border: 0;
-        background-image: url("../../../assets/img/search.png");
-        background-size: 2rem 2rem;
-        margin-left: -3rem;
-        margin-top: 4px;
+        background-image: url("../../../assets/img/search.svg");
+        background-repeat: no-repeat;
+        background-size: 1.5rem 1.5rem;
+        margin-left: -8.8rem;
+        margin-top: 7px;
     }
 }

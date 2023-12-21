@@ -3,7 +3,7 @@ import "./location_link.scss"
 
 const LocationLink = () => {
     return (
-        <a className="location-link" href=""><FontAwesomeIcon icon="location-dot" fixedWidth/>Shop Location</a>
+        <a className="location-link" href=""><FontAwesomeIcon icon="location-dot" fixedWidth/>Tìm kiếm cửa hàng</a>
     )
 }
 

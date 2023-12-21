@@ -1,12 +1,14 @@
 nav {
     max-height: fit-content;
     margin-top: 2rem;
+    margin-bottom: 10px;
     ul {
         list-style-type: none;
         display: flex;
         margin: 2px;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap:30px;
         li {
             .NavLink {
                 padding: 0.2rem 1rem 0.2rem 1rem;
@@ -14,8 +16,8 @@ nav {
                 text-decoration: none;
                 font-family: "Inter";
                 font-size: 20px;
-                color: black;
-                font-weight: bold;
+                color: #002E5D;
+                font-weight:900;
             }
 
             a:hover {
@@ -26,9 +28,9 @@ nav {
                 border: none;
                 font-size: 16px;
                 font-weight: bold;
-                width: 7rem;
-                height: 3rem;
-                background-color: rgb(231, 73, 73);
+                width: 4rem;
+                height: 2rem;
+                background-color: #002E5D;
                 color: white;
                 border-radius: 7px;
             }

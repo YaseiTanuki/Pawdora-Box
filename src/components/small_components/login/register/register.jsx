@@ -4,9 +4,22 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate  } from 'react-router-dom';
 
 
 const Register = () => {
+    const navigate = useNavigate();
+    const handleLogin = () => {
+        const authenticatedUser = {
+            id: 1,
+            username: 'Umichan',
+            fullName: 'Trần Thị Hải',
+            email: '21522037@gm.uit.edu.vn',
+            
+          };
+      
+          navigate('/user-info', { state: { user: authenticatedUser } });
+        }
     const [showPassword, setShowPassword] = useState(false)
 
     const togglePasswordVisibility = () => {
@@ -46,9 +59,9 @@ const Register = () => {
                         className="eye-icon"/>
                 </div>
             </form>
-            <NavLink to="/">
-                    <button type="submit">Đăng ký</button>
-            </NavLink>
+            <button type="submit" onClick={handleLogin}>
+                Đăng ký
+            </button>
             <p className="notaccount">Bạn đã có tài khoản? &nbsp;
                 <NavLink to="/login" className="NavLink">
                     <span> Đăng nhập ngay</span>

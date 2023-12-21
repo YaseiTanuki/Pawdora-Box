@@ -21,14 +21,14 @@ const NavigationBar = () => {
 
         <nav>
             <ul>
-                <li><NavLink className="NavLink" to="/">Trang chủ</NavLink></li>
-                <li><NavLink className="NavLink" to="/dog">Chó</NavLink></li>
-                <li><NavLink className="NavLink" to="#">Mèo</NavLink></li>
-                <li><NavLink className="NavLink" to="#">Hasmter</NavLink></li>
-                <li><NavLink className="NavLink" to="#">Thỏ</NavLink></li>
-                <li><NavLink className="NavLink" to="#">Chim</NavLink></li>
-                <li><NavLink className="NavLink" to="#">Dịch vụ</NavLink></li>
-                <li><button className="sale-button">Khuyến mãi</button></li>
+                <li><NavLink className="NavLink" to="/">TRANG CHỦ</NavLink></li>
+                <li><NavLink className="NavLink" to="/dog">CHÓ</NavLink></li>
+                <li><NavLink className="NavLink" to="#">MÈO</NavLink></li>
+                <li><NavLink className="NavLink" to="#">HAMSTER</NavLink></li>
+                <li><NavLink className="NavLink" to="#">THỎ</NavLink></li>
+                <li><NavLink className="NavLink" to="#">CHIM</NavLink></li>
+                <li><NavLink className="NavLink" to="#">DỊCH VỤ</NavLink></li>
+                <li><button className="sale-button">SALE</button></li>
             </ul>
         </nav>
     )

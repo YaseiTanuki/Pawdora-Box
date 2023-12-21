@@ -9,7 +9,7 @@ const Footer = () => {
         <footer>
             <section className="footer-overall">
                 <div className="footer-logo-container">
-                    <Logo/>
+                    <Logo showSlogan={false} style="small-logo"/>
                 </div>
             </section>
 

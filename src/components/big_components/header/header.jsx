@@ -14,10 +14,18 @@ const Header = (props) => {
             </section>
             <section className="header-content">
                 <section className="site-name">
-                    <Logo/>
+                    <Logo showSlogan={true} style="logo"/>
                     <SearchBar/>
-                    <CartButton/>
-                    <LoginButton/>
+                    <section className="button-container">
+                        <article className="login-button-container">
+                            <LoginButton/>
+                        </article>
+                        <article className="cart-button-container">
+                            <CartButton/>
+                        </article>
+                        
+                    </section>
+                    
                 </section>
                 { props.showNav ? 
                     (<section className="navigation">

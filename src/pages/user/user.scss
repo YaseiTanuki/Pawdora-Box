@@ -1,0 +1,13 @@
+.user {
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    .user-container {
+        grid-column: 2/11;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+}

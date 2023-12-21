@@ -8,10 +8,11 @@ const FooterInfo = () => {
     return (
         <section className="finfo-container">
             <article className="finfo-about-us">
-                <h4>VỀ CHÚNG TUI</h4>
-                <p>Blog thú cưng</p>
+                <h4>VỀ CHÚNG TÔI</h4>
+                
                 <p>Điều khoản và điều kiện</p>
                 <p>Chính sách và bảo mật</p>
+                <p>FAQ</p>
             </article>
             <article className="finfo-shopping">
                 <h4>MUA SẮM</h4>
@@ -19,25 +20,22 @@ const FooterInfo = () => {
                 <p>Dịch vụ</p>
                 <p>Đánh giá</p>
             </article>
+            <article className="finfo-LINK">
+                <h4>LIÊN KẾT</h4>
+                <p>Trang chủ</p>
+                <p>Sản phẩm</p>
+                <p>Blog thú cưng</p>
+            </article>
             <article className="finfo-contact">
                 <h4>LIÊN HỆ</h4>
-                <h5><FontAwesomeIcon icon="location-dot"/> Địa chỉ</h5>
-                <p>10 Khu phố 6, phường Linh Trung, Tp Thủ Đức,<br />Tp Hồ Chí Minh, Việt Nam</p>
-                <h5><FontAwesomeIcon icon="phone"/> Hotline</h5>
-                <p>0983xxxxxx</p>
-                <h5><FontAwesomeIcon icon="envelope"/> Email</h5>
+                <span ><FontAwesomeIcon className="icon-location" icon="location-dot"/> </span> 
+                <p> <span> </span> <span> </span> 10 Khu phố 6, phường Linh Trung, Tp Thủ Đức, Tp Hồ Chí Minh, Việt Nam</p>
+                <span><FontAwesomeIcon icon="phone"/></span>
+                <p>0983xxxxxx</p> <br/>
+                <span><FontAwesomeIcon icon="envelope"/></span>
                 <p>pawdorabox@gmail.com</p>
-                <h5>Thời gian mở cửa</h5>
-                <p>Thứ hai - Thứ sáu: 8am - 7pm</p>
-                <p>Thứ bảy & Chủ nhật: 9am - 5pm</p>
                 <h5>Theo dõi chúng tôi</h5>
                 <SocialMedia/>
-            </article>
-            <article className="finfo-payment-method">
-                <h4>THANH TOÁN AN TOÀN</h4>
-                <article>
-                    <img src={paymentMethod} alt="" />
-                </article>
             </article>
         </section>
     )

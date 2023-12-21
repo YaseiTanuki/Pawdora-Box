@@ -5,7 +5,7 @@ footer {
     padding: 1rem;
     display: grid;
     grid-template-columns: subgrid;
-    background-color: var(--brand-color);
+    background-color:#E4EEFA;
     
     .footer-overall {
         grid-column: 1 / 13;
@@ -29,7 +29,6 @@ footer {
     .footer-info {
         grid-column: 1 / 13;
         grid-row: 2 / 3;
-        border-right: 1px solid black;
     }
 
 }

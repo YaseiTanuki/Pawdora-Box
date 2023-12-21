@@ -12,6 +12,8 @@ import ProductDetail from './pages/product_detail/productdetail';
 import ProductContext from "../hooks/productContext"
 import { productsData } from "./pages/product_page/product_page"
 import React, { useEffect, useState, useContext } from 'react'
+import CartPage from './pages/cart/cart';
+import UserPage from "./pages/user/user"
 function App() {
   const {productID, setProductID} = useContext(ProductContext)
   const [viewProductID, setViewProductID] = useState("1")
@@ -37,7 +39,9 @@ function App() {
         <Route path="/register" element={<RegisterPage/>}/>
         <Route path="/pay" element={<PayPage/>}/>
         <Route path="/dog" element={<ProductPage/>}/>
+        <Route path="/cart" element={<CartPage/>}/>
         <Route path="/:id/detail"  element={<ProductDetail product={productsData[viewProductID]}/>}/>
+        <Route path="/user-info" element={<UserPage />} />
       </Routes>
     </>
   )
