@@ -76,9 +76,8 @@ const CartPage = () => {
         <>
         <Header showNav={true}/>
         <section className="cart-page">
-            
+            <h3>Giỏ hàng</h3>
             <section className="cart-list-container">
-                <h3>Giỏ hàng</h3>
                 <ul className="cart-list">
                     {cartList.map((item) => (
                         <li><CartProductDisplay img={item.img} name={item.name} price={item.price}/></li>

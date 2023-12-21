@@ -1,6 +1,6 @@
 import DeliveryInfo from "../../components/small_components/delivery_info/delivery_info"
 import './sub_cart_page.scss'
-
+import { useState } from "react"
 import Footer from "../../components/big_components/footer/footer"
 import Header from "../../components/big_components/header/header"
 import { useContext } from "react"
@@ -19,6 +19,16 @@ const SubCartPage = () => {
             </article>
         )
     }
+
+    const [totalPrice, setTotalPrice] = useState(0)
+    let total = 0
+    for(let j = 0; j < payProduct.length; j++)
+    {
+        total = total + payProduct[j].price
+    }
+
+    if(totalPrice!= total)
+        setTotalPrice(total);
 
     const CartProductDisplay = (props) => {
         return(
@@ -39,14 +49,28 @@ const SubCartPage = () => {
     return (
         <section className="sub-cart-page">
             <Header/>
+            <h3>Giỏ hàng</h3>
             <section className="cart-list-container">
-                <h3>Giỏ hàng</h3>
                 <ul className="cart-list">
                     {payProduct.map((item) => (
                         <li><CartProductDisplay img={item.img} name={item.name} price={item.price}/></li>
                     ))}
                 </ul>
                 <Dealer/>
+                <article>
+                    <div className="fee">
+                        <p>Tạm tính: </p>
+                        <p>đ{totalPrice}</p>
+                    </div>
+                    <div className="fee">
+                        <p>Phí vận chuyển: </p>
+                        <p>đ30000</p>
+                    </div>
+                    <div className="fee2">
+                        <p>Tổng: </p>
+                        <p className="red">đ{totalPrice+30000}</p>
+                    </div>
+                </article>
             </section>
             <article className="delivery">
                 <DeliveryInfo/>
