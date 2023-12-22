@@ -20,14 +20,16 @@ import ThanksPage from "./pages/thanks_page/thanks_page"
 
 function App() {
   const {productID, setProductID} = useContext(ProductContext)
-  const [viewProductID, setViewProductID] = useState("1")
+  const [viewProductID, setViewProductID] = useState(1)
 
   useEffect(() => {
     function getProductID () {
       if(document.URL.includes("/detail")) {
         let myURL = document.URL.replace("/detail", '')
-        setViewProductID(myURL.slice(-1) - 1)
-        console.log(myURL.slice(-1))
+        myURL = myURL.replace("http://localhost:1707/", '')
+        let id = Number(myURL)
+        console.log(id - 1)
+        setViewProductID(id - 1)
       }
     }
 
