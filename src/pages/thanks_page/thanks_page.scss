@@ -19,26 +19,34 @@
             height: 300px;
             margin-bottom: 50px;
             border-radius: 10px;
+            .icon{
+                height: 30px;
+                margin-top: 40px;
+                font-size: 30px;
+            }
             div {
                 height: 80px;
                 h1 {
                     font-size: 40px;
                     color: #003c6a;
+                    margin-top: 10px;
                 }
                 p {
+                    margin-top: -5px;
                     margin-left: 10px;
-                    margin-top: 20px;
                     font-size: 16px;
                     font-weight: bold;
                 }
 
                 button {
-                    
-                    width: 200px;
-                    height: 50px;
+                    margin-top: -30px;
+                    width: 250px;
+                    height: 40px;
                     background-color: #003c6a;
                     color:white;
-                    font-weight: bold;
+                  
+                    border-radius: 10px;
+                    padding: 0 20px;
                 }
             }
         }
