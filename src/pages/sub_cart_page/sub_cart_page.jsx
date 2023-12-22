@@ -6,6 +6,7 @@ import Header from "../../components/big_components/header/header"
 import { useContext } from "react"
 import PayContext from "../../../hooks/pay_context"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import process2 from "../../assets/img/process2.png"
 
 const SubCartPage = () => {
 
@@ -48,12 +49,15 @@ const SubCartPage = () => {
       }
     return (
         <section className="sub-cart-page">
-            <Header/>
-            <h3>Giỏ hàng</h3>
+            <Header showNav={true}/>
+            <div className="process">
+                <img src={process2} alt="" />
+            </div>
+            <h3>Thanh toán</h3>
             <section className="cart-list-container">
                 <ul className="cart-list">
                     {payProduct.map((item) => (
-                        <li><CartProductDisplay img={item.img} name={item.name} price={(item)=>{formatPrice(item.price)}}/></li>
+                        <li><CartProductDisplay img={item.img} name={item.name} price={item.price}/></li>
                     ))}
                 </ul>
                 <Dealer/>
@@ -62,12 +66,12 @@ const SubCartPage = () => {
                         <p>Tạm tính: </p>
                         <p>đ{totalPrice}</p>
                     </div>
-                    <div className="fee">
+                    <div className="fee3">
                         <p>Phí vận chuyển: </p>
                         <p>đ30000</p>
                     </div>
                     <div className="fee2">
-                        <p>Tổng: </p>
+                        <p>Tổng cổng </p>
                         <p className="red">đ{totalPrice+30000}</p>
                     </div>
                 </article>

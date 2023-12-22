@@ -2,10 +2,17 @@
     grid-column: 1/13;
     display: grid;
     grid-template-columns: subgrid;
-    
     h3{
         grid-column: 2 / 13;
+        grid-row: 3 / 4;
+        color:#002E5D;
+        font-size: 24px;
+    }
+    .process{
+        grid-column: 4/10;
         grid-row: 2 / 3;
+        margin-left: 100px;
+        margin-top: 50px;
     }
 
     .delivery {
@@ -19,7 +26,7 @@
     .cart-list-container {
         grid-column: 2 / 6;
         border: 1px solid #ccc;
-        margin-bottom: 10px;
+        margin-bottom: 80px;
         
         ul {
             list-style: none;
@@ -55,8 +62,18 @@
             border-top: 1px solid #ccc;
             display: flex;
             justify-content: space-between;
-            padding-left: 1rem;
-            padding-right: 1rem;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .fee{
+            height: 40px;
+        }
+        .fee3{
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 40px;
         }
 
         .fee2{
@@ -71,7 +88,7 @@
 
 .dealer {
     margin-top: -20px;
-    margin-left: 10%;
+    margin-left: 20px;
     width: 80%;
     margin-bottom: 20px;
 
@@ -79,6 +96,14 @@
         width: 50%;
         height: 40px;
         border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input::placeholder {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25px;
     }
 
     button {
@@ -87,5 +112,7 @@
         width: 30%;
         background-color: #003c6a;
         color: white;
+        border-radius: 9px;
+        margin-left: 10px;
     }
 }

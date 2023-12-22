@@ -45,7 +45,11 @@
                     display: flex;
                     width: 100%;
                     justify-content: space-between;
-
+                    .product-name{
+                        h4{
+                            font-size: 16px;
+                        }
+                    }
                     .price {
                         h3 {
                             color: red;

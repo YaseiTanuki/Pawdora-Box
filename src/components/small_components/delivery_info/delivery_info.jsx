@@ -17,12 +17,13 @@ const DeliveryInfo = (props) => {
                 <input type="text" placeholder="Email"/>
                 <input type="text" placeholder="Số điện thoại"/>
                 <input type="text" placeholder="Tỉnh / Thành phố"/>
-                <input type="text" placeholder="Quận"/>
-                <input type="text" placeholder="Xã"/>
+                <input type="text" placeholder="Quận / Huyện"/>
+                <input type="text" placeholder="Xã / Phường"/>
                 <input type="text" placeholder="Số nhà"/>
-                <label htmlFor="">Phương thức thanh toán</label>
-                <select className="full" name="" id="">
-                    <option value="Hehe"></option>
+                <label htmlFor="" >Phương thức thanh toán</label>
+                <select className="full" name="" id="" >
+                    <option value="Hehe">Thanh toán bằng tiền mặt</option>
+                    <option value="Hehe">Chuyển khoản</option>
                 </select>
             </form>
             <button onClick={toThanks} className="end-button">Đặt hàng</button>
