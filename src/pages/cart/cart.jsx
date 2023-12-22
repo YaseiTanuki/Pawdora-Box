@@ -17,6 +17,21 @@ const CartPage = () => {
 
     const {cartProduct, setCartProduct} = useContext(cartContext)
 
+    function removeProduct (id) {
+        let removedList = cartList.filter(function(item) {
+            return item.id !== id
+        })
+
+        console.log(id)
+        console.log("before delete")
+        console.log(removedList)
+        if(removedList.length != cartList.length)
+        {
+            setCartList(removedList)
+            console.log("deleted")
+        }
+    }
+
       const [cartList, setCartList] = useState([])
       const {payProduct, setPayProduct} = useContext(PayContext)
       const CartProductDisplay = (props) => {
@@ -88,7 +103,7 @@ const CartPage = () => {
             <section className="cart-list-container">
                 <ul className="cart-list">
                     {cartList.map((item) => (
-                        <li><CartProductDisplay img={item.img} name={item.name} price={item.price}/></li>
+                        <li><CartProductDisplay img={item.img} name={item.name} price={item.price} id={item.id}/></li>
                     ))}
                 </ul>
             </section>

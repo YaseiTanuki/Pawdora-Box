@@ -185,6 +185,7 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
   return (
     <>
       <Header showNav={true} />
+      <p className='url-text'>Trang chủ &#10093; chó &#10093; 1</p>
       <div className="product-detail">
         <div className='img'>
           <img className='image' src={img} alt={name} />

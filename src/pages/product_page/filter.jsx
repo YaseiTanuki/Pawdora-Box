@@ -9,6 +9,7 @@ const Filter = ({ categories1, categories2, onChange }) => {
       
       <div className="category-group">
       <div>
+        <p>Trang chủ &#10093; chó</p>
         <img src={filter_icon} /> <h2>Danh mục:</h2>
       </div>
         {categories1.map((category) => (

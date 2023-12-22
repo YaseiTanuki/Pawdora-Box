@@ -1,5 +1,9 @@
 /* Thêm nội dung này vào file productdetail.scss hoặc một file SCSS khác */
 
+.url-text {
+  grid-column: 2 / 3;
+}
+
 .product-detail {
   display: flex;
   grid-column: 1/13;
