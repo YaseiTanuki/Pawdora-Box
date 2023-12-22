@@ -73,6 +73,10 @@ const CartPage = () => {
     const toPay = () => {
         navigate("/subcartpage")
     }
+    const formatPrice = (amount) => {
+        return `đ${new Intl.NumberFormat('vi-VN').format(amount)}`;
+      };
+    
 
     return (
         <>
