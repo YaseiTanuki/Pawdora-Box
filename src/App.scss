@@ -31,6 +31,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   --brand-color:#ffffff;
+  font-family: "Inter";
   background-color: var(--brand-color);
 }
 
