@@ -53,7 +53,7 @@ const SubCartPage = () => {
             <section className="cart-list-container">
                 <ul className="cart-list">
                     {payProduct.map((item) => (
-                        <li><CartProductDisplay img={item.img} name={item.name} price={item.price}/></li>
+                        <li><CartProductDisplay img={item.img} name={item.name} price={(item)=>{formatPrice(item.price)}}/></li>
                     ))}
                 </ul>
                 <Dealer/>
