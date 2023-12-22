@@ -26,41 +26,20 @@ import mem2 from '../../assets/img/mem2.svg'
 import mem3 from '../../assets/img/mem3.svg'
 import mem4 from '../../assets/img/mem4.svg'
 import mem5 from '../../assets/img/mem5.svg'
+import { productsData } from "../product_page/product_page"
 
 const Home = () => {
-  
+    
     const [displayedProducts, setDisplayedProducts] = useState(10)
-    const products = [
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-        { img: "public/img/home-product/cat1.webp", name: "This is product item", price: 200, description: "Description" },
-    ]
-    const showMoreProducts = () => {
-        // Tăng số lượng sản phẩm hiển thị khi nhấn "Xem thêm"
-        setDisplayedProducts(displayedProducts + 8)
-    }
-
-    const showLessProducts = () => {
-        // Giảm số lượng sản phẩm hiển thị khi nhấn "Thu gọn"
-        setDisplayedProducts(10) // Quay lại số lượng sản phẩm hiển thị ban đầu
-    }
-
-
+    const [displayedSaleProducts, setDisplayedSaleProducts] = useState(4);
+    const [displayedNewProducts, setDisplayedNewProducts] = useState(4);
+    const [displayedLoveProducts, setDisplayedLoveProducts] = useState(4);
+    const [showMoreSale, setShowMoreSale] = useState(true);
+    const [showMoreNew, setShowMoreNew] = useState(true);
+    const [showMoreLove, setShowMoreLove] = useState(true);
+    const sale2Products = productsData.slice(0, 7); // ID từ 1 đến 4
+    const newProducts = productsData.slice(8, 15); // ID từ 9 đến 15
+    const loveProducts = productsData.slice(15, 22); // ID từ 16 đến 22
     const Card = (props) => {
         return (
             <article className="card">
@@ -90,6 +69,50 @@ const Home = () => {
         )
     }
 
+    const showMoreProducts = (type) => {
+        switch (type) {
+            case 'sale':
+                setDisplayedSaleProducts(displayedSaleProducts + 4);
+                if (displayedSaleProducts + 4 >= sale2Products.length) {
+                    setShowMoreSale(false);
+                }
+                break;
+            case 'new':
+                setDisplayedNewProducts(displayedNewProducts + 4);
+                if (displayedNewProducts + 4 >= newProducts.length) {
+                    setShowMoreNew(false);
+                }
+                break;
+            case 'love':
+                setDisplayedLoveProducts(displayedLoveProducts + 4);
+                if (displayedLoveProducts + 4 >= loveProducts.length) {
+                    setShowMoreLove(false);
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    const showLessProducts = (type) => {
+        switch (type) {
+            case 'sale':
+                setDisplayedSaleProducts(4);
+                setShowMoreSale(true);
+                break;
+            case 'new':
+                setDisplayedNewProducts(4);
+                setShowMoreNew(true);
+                break;
+            case 'love':
+                setDisplayedLoveProducts(4);
+                setShowMoreLove(true);
+                break;
+            default:
+                break;
+        }
+    }
+
     return (
         <>
             <Header showNav={true}/>
@@ -99,30 +122,59 @@ const Home = () => {
                 </section>
                 <section className="main-content">
                     <article className="sale">
-                        <img src={sale1} alt="" />
+                        <img className="img1"src={sale1} alt="" />
                         <img src={sale2} alt="" />
                     </article>
+                    <div className="km">
                     <h3 className="sale-title">Khuyến mãi</h3>
+                    {showMoreSale ? (
+                        <button className="show-more-button" onClick={() => showMoreProducts('sale')}>
+                            Xem thêm <span>&#10093;</span>
+                        </button>
+                    ) : (
+                        <button className="show-more-button" onClick={() => showLessProducts('sale')}>
+                            <span>&#10092; </span>Thu gọn
+                        </button>
+                    )}</div>
                     <article className="sale2">
-                        <Card img={sale3} name="Thức ăn hạt khô KitchenFlavor Nature Gourmet cho chó" price="đ21.000"/>
-                        <Card img={sale4} name="Vòng cổ vải kèm chuông nhiều hoạ tiết" price="đ35.000"/>
-                        <Card img={sale5} name="Xúc xích nhiều vị cho chó mèo thanh 15g" price="đ20.000"/>
-                        <Card img={sale6} name="Canxi Mỹ PetAg Calcium Phosphorus cho chó mèo" price="đ265.000"/>
+                        {sale2Products.slice(0, displayedSaleProducts).map((product, index) => (
+                            <Card key={index} img={product.img} name={product.name} price={product.price} />
+                        ))}
                     </article>
+                    
+                    <div className="spm">
                     <h3 className="new-title">Sản phẩm mới</h3>
+                    {showMoreNew ? (
+                        <button className="show-more-button" onClick={() => showMoreProducts('new')}>
+                            Xem thêm <span>&#10093;</span>
+                        </button>
+                    ) : (
+                        <button className="show-more-button" onClick={() => showLessProducts('new')}>
+                            <span>&#10092; </span>Thu gọn 
+                        </button>
+                    )}</div>
                     <article className="new">
-                        <Card img={new1} name="Bánh quy ngũ cốc cho chó mèo" price="đ27.000"/>
-                        <Card img={new2} name="Khăn tắm siêu thấm hút cho chó mèo" price="đ40.000"/>
-                        <Card img={new3} name="Bánh sữa dê bổ sung dinh dưỡng cho chó mèo" price="đ40.000"/>
-                        <Card img={new4} name="Bàn chải cao su tắm mát xa cho chó mèo" price="đ40.000"/>
+                        {newProducts.slice(0, displayedNewProducts).map((product, index) => (
+                            <Card key={index} img={product.img} name={product.name} price={product.price} />
+                        ))}
                     </article>
+                    <div className="yt">
                     <h3 className="love-title">Được ưa thích</h3>
+                    {showMoreLove ? (
+                        <button className="show-more-button" onClick={() => showMoreProducts('love')}>
+                            Xem thêm <span>&#10093;</span>
+                        </button>
+                    ) : (
+                        <button className="show-more-button" onClick={() => showLessProducts('love')}>
+                            <span>&#10092; </span>Thu gọn
+                        </button>
+                    )}</div>
                     <article className="love">
-                        <Card img={new1} name="Bánh quy ngũ cốc cho chó mèo" price="đ27.000"/>
-                        <Card img={sale6} name="Canxi Mỹ PetAg Calcium Phosphorus cho chó mèo" price="đ265.000"/>
-                        <Card img={new4} name="Bàn chải cao su tắm mát xa cho chó mèo" price="đ40.000"/>
-                        <Card img={sale3} name="Thức ăn hạt khô KitchenFlavor Nature Gourmet cho chó" price="đ21.000"/>
+                        {loveProducts.slice(0, displayedLoveProducts).map((product, index) => (
+                            <Card key={index} img={product.img} name={product.name} price={product.price} />
+                        ))}
                     </article>
+                   
                 </section>
                 <article className="value">
                     <img src={Value} alt="" />
