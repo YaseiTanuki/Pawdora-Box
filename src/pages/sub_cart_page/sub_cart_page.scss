@@ -114,5 +114,11 @@
         color: white;
         border-radius: 9px;
         margin-left: 10px;
+
+        &:hover{
+            background-color: #2c88cf;
+            color: black;
+            
+        }
     }
 }

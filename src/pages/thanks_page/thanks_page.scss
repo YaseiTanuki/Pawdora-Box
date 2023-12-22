@@ -44,9 +44,15 @@
                     height: 40px;
                     background-color: #003c6a;
                     color:white;
-                  
+                    border: 1px solid #ccc;
                     border-radius: 10px;
                     padding: 0 20px;
+
+                    &:hover{
+                        background-color: #2c88cf;
+                        color: black;
+                        
+                    }
                 }
             }
         }

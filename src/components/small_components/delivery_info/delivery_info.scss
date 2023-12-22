@@ -62,5 +62,12 @@
         border-radius: 8px;
         padding: 0 30px;
         margin-left: 5px;
+        border: 1px solid #ccc;
+
+        &:hover{
+            background-color: #2c88cf;
+            color: black;
+            
+        }
     }
 }

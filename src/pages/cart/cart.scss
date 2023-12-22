@@ -93,6 +93,12 @@
             font-size: 20px;
             font-weight: bold;
             margin-left: 10%;
+            border: 1px solid #ccc;
+            &:hover{
+                background-color: #2c88cf;
+                color: black;
+                
+            }
         }
         li{
             margin-bottom: 20px;
