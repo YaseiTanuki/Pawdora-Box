@@ -16,16 +16,16 @@ const ThanksPage = () => {
     return (
         <section className="thanks-page">
             <Header showNav={true}/>
-            <div className="process">
+            <div className="process center">
                     <img src={process3} alt="" />
                 </div>
-            <div>
+            <div className="center">
                 <article className="message">
-                    <div className="icon">
+                    <div className="icon center">
                 <FontAwesomeIcon icon={faShoppingBag} /></div>
-                    <div><h1>Cảm ơn bạn đã đặt hàng!</h1></div>
-                    <div><p>Bạn sẽ sớm nhận được email xác nhận và thông tin theo dõi trong hộp thư đến của mình.</p></div>
-                    <div><button onClick={toHome}>Tiếp tục mua sắm</button></div>
+                    <div className="center"><h1>Cảm ơn bạn đã đặt hàng!</h1></div>
+                    <div className="center"><p>Bạn sẽ sớm nhận được email xác nhận và thông tin theo dõi trong hộp thư đến của mình.</p></div>
+                    <div className="center"><button onClick={toHome}>Tiếp tục mua sắm</button></div>
                 </article>
             </div>
             <Footer/>

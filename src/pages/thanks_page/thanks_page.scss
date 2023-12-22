@@ -1,6 +1,6 @@
 .thanks-page {
     grid-column: 1 / 13;
-    margin-bottom: 50px;
+
     .process{
         grid-column: 4/10;
         grid-row: 1 / 2;
@@ -8,7 +8,7 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    div {
+    .center {
         display: flex;
         justify-content: center;
         grid-row: 2 / 3;
