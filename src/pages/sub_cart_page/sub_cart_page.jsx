@@ -31,22 +31,25 @@ const SubCartPage = () => {
     if(totalPrice!= total)
         setTotalPrice(total);
 
-    const CartProductDisplay = (props) => {
-        return(
-            <article className="cart-item">
-                <img src={props.img} alt="" />
-                <article className="detail-container">
-                    <article className="product-name">
-                        <h4>{props.name}</h4>
-                        <button><FontAwesomeIcon icon="trash" /></button>
-                    </article>
-                    <article className="price">
-                        <h3>{props.price}đ</h3>
+        const CartProductDisplay = (props) => {
+            return (
+                <article className="cart-item">
+                    <img src={props.img} alt="" />
+                    <article className="detail-container">
+                        <article className="product-name">
+                            <h4>{props.name}</h4>
+                            <button><FontAwesomeIcon icon="trash" /></button>
+                        </article>
+                        <article className="price">
+                            <h3>{formatPrice(props.price)}</h3>
+                        </article>
                     </article>
                 </article>
-            </article>
-        )
-      }
+            );
+        };
+        const formatPrice = (amount) => {
+            return `đ${new Intl.NumberFormat('vi-VN').format(amount)}`;
+          };
     return (
         <section className="sub-cart-page">
             <Header showNav={true}/>
@@ -62,17 +65,17 @@ const SubCartPage = () => {
                 </ul>
                 <Dealer/>
                 <article>
-                    <div className="fee">
+                <div className="fee">
                         <p>Tạm tính: </p>
-                        <p>đ{totalPrice}</p>
+                        <p>{formatPrice(totalPrice)}</p>
                     </div>
                     <div className="fee3">
                         <p>Phí vận chuyển: </p>
-                        <p>đ30000</p>
+                        <p>{formatPrice(30000)}</p>
                     </div>
                     <div className="fee2">
                         <p>Tổng cổng </p>
-                        <p className="red">đ{totalPrice+30000}</p>
+                        <p className="red">{formatPrice(totalPrice + 30000)}</p>
                     </div>
                 </article>
             </section>

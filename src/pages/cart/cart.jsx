@@ -20,9 +20,8 @@ const CartPage = () => {
       const [cartList, setCartList] = useState([])
       const {payProduct, setPayProduct} = useContext(PayContext)
       const CartProductDisplay = (props) => {
-        return(
+        return (
             <article className="cart-item">
-               
                 <img src={props.img} alt="" />
                 <article className="detail-container">
                     <article className="product-name">
@@ -30,12 +29,12 @@ const CartPage = () => {
                         <button><FontAwesomeIcon icon="trash" /></button>
                     </article>
                     <article className="price">
-                        <h3>{props.price}đ</h3>
+                        <h3>{formatPrice(props.price)}</h3>
                     </article>
                 </article>
             </article>
-        )
-      }
+        );
+    };
 
     for(let i = 0; i < cartProduct.length; i++)
     {
@@ -95,7 +94,10 @@ const CartPage = () => {
             </section>
             <section className="total">
                 <article className="total-detail-container">
-                    <h1><span className="not-red">Tổng tiền:</span> <span>đ{totalPrice}</span></h1>
+                <h1>
+                    <span className="not-red">Tổng tiền:</span>{" "}
+                    <span>{formatPrice(totalPrice)}</span>
+                </h1>
                     <ul>
                         <li>Hỗ trợ đổi hàng trong vòng 7 ngày tại tất cả các cửa hàng trên toàn quốc.</li>
                         <li>Miễn phí ship với đơn hàng từ 500.000đ.</li>
