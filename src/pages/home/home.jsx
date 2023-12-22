@@ -112,6 +112,9 @@ const Home = () => {
                 break;
         }
     }
+    const formatPrice = (amount) => {
+        return `đ${new Intl.NumberFormat('vi-VN').format(amount)}`;
+      };
 
     return (
         <>
@@ -138,7 +141,7 @@ const Home = () => {
                     )}</div>
                     <article className="sale2">
                         {sale2Products.slice(0, displayedSaleProducts).map((product, index) => (
-                            <Card key={index} img={product.img} name={product.name} price={product.price} />
+                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} />
                         ))}
                     </article>
                     
@@ -155,7 +158,7 @@ const Home = () => {
                     )}</div>
                     <article className="new">
                         {newProducts.slice(0, displayedNewProducts).map((product, index) => (
-                            <Card key={index} img={product.img} name={product.name} price={product.price} />
+                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} />
                         ))}
                     </article>
                     <div className="yt">
@@ -171,7 +174,7 @@ const Home = () => {
                     )}</div>
                     <article className="love">
                         {loveProducts.slice(0, displayedLoveProducts).map((product, index) => (
-                            <Card key={index} img={product.img} name={product.name} price={product.price} />
+                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} />
                         ))}
                     </article>
                    
