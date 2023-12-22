@@ -1,7 +1,7 @@
 import "./banner.scss"
 
 //Banner image is not included in github source code
-import BannerImage from "../../../assets/img/banner.png"
+import BannerImage from "../../../assets/img/banner.svg"
 
 const Banner = () => {
     return(
