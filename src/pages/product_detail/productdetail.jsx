@@ -320,10 +320,10 @@ const ProductDetail = ({ product, onAddToCart, onBuyNow}) => {
           <p>3 Sao (30)</p>
           <p>2 Sao (0)</p>
           <p>1 Sao (0)</p>
-          <p>Có bình luận (500)</p>
+          <p  >Có bình luận (500)</p>
           </div>
           <div className='video'>
-          <p >Có ảnh/video (200)</p></div>
+          <p className='cm'>Có ảnh/video (200)</p></div>
           </div>
         </div>
             {reviews.length > 0 && (

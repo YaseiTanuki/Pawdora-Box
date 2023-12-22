@@ -168,7 +168,7 @@
   margin-bottom: 30px;
   .rating-summary {
     display: grid;
-    width: 1000px;
+    width: 1050px;
     align-items: center;
     flex-wrap: wrap; 
     margin-top: 30px;
@@ -183,10 +183,13 @@
         font-weight: bold;
         width: 80px;
       }
+      p.cm{
+        width: 200px;
+      }
     }
     .ft{
       grid-column: 2/auto;
-      margin-left: -6px;
+      margin-left: 5px;
       grid-template-rows: 2, 40px;
       p{
         border-radius: 5px;
@@ -201,7 +204,7 @@
       }
       .video{
         grid-row: 2/3;
-        width: 150px;
+        width: 180px;
         margin-top: 10px;
       }
 
