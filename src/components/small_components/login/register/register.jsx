@@ -64,7 +64,7 @@ const Register = () => {
             </button>
             <p className="notaccount">Bạn đã có tài khoản? &nbsp;
                 <NavLink to="/login" className="NavLink">
-                    <span> Đăng nhập ngay</span>
+                    <strong> Đăng nhập ngay</strong>
                 </NavLink>
             </p>
         </article>

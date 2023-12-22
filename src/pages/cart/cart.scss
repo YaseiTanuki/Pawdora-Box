@@ -6,14 +6,25 @@
 
     h3 {
         grid-column: 2/13;
+        grid-row: 2 / 3;
+        color:#002E5D;
+        font-size: 24px;
+    }
+
+    .process{
+        grid-column: 4/10;
         grid-row: 1 / 2;
+        margin-left: 100px;
+        margin-top: 50px;
     }
     
 }
 
 .cart-list-container {
     grid-column: 2 / 6;
-    border: 1px solid #ccc;
+    border: 1px solid #e2e2e2;
+    border-radius: 7px;
+    margin-bottom: 50px;
     ul {
         list-style: none;
         padding: 15px;
@@ -48,12 +59,13 @@
 
 .total {
     grid-column: 7 / 13;
-    
+    margin-left: -60px;
     .total-detail-container {
         border: 1px solid #ccc;
-        width: 300px;
-        padding: 20px;
-
+        width: 400px;
+        padding: 0 10px 10px 20px;
+        margin-bottom: 50px;
+        border-radius: 7px;
         h1{
             font-size: 24px;
             .not-red {

@@ -34,6 +34,9 @@
     
   }
 }
+.buy-now-button{
+  margin-left: 25px;
+}
 .added-to-cart-message{
   color: #003c6a;
   font-size: 10px;
@@ -49,6 +52,7 @@
 
 .content{
   margin-inline-start: 110px;
+  width: 400px;
   .options{
     p{
       margin:0;

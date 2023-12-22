@@ -7,11 +7,11 @@ const Starter = () => {
         <article className="starter">
             <div className="option-login">
                 <h4>Welcome!</h4>
-                <NavLink to="/login">Login</NavLink>
+                <NavLink to="/login">Đăng nhập</NavLink>
             </div>
             <div className="option-register">
-                <h4>Do not have account?</h4>
-                <NavLink to="/register">Register</NavLink>
+                <h4>Bạn chưa có tài khoản?</h4>
+                <NavLink to="/register">Đăng ký</NavLink>
             </div>
         </article>
     )

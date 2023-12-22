@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './cart.scss'
 import { useNavigate } from "react-router-dom"
 import PayContext from "../../../hooks/pay_context"
+import process from "../../assets/img/process.png"
 
 const CartPage = () => {
 
@@ -21,6 +22,7 @@ const CartPage = () => {
       const CartProductDisplay = (props) => {
         return(
             <article className="cart-item">
+               
                 <img src={props.img} alt="" />
                 <article className="detail-container">
                     <article className="product-name">
@@ -76,6 +78,9 @@ const CartPage = () => {
         <>
         <Header showNav={true}/>
         <section className="cart-page">
+            <div className="process">
+                <img src={process} alt="" />
+            </div>
             <h3>Giỏ hàng</h3>
             <section className="cart-list-container">
                 <ul className="cart-list">
