@@ -16,10 +16,10 @@
         grid-template-columns: subgrid;
         background-color: #E4EEFA;
         .login-form-container {
-            grid-column: 5 / 9;
+            grid-column: 4 / 8;
             width: 4fr;
             margin-top: 5rem;
-        
+            margin-left: 4rem;
         }
     }
 }

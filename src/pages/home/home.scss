@@ -14,7 +14,7 @@
 
     .banner-container {
         border-bottom: 1px solid black;
-        padding-bottom: 1rem;
+        padding: 0;
         grid-column: 1 / 13;
         grid-row: 1 / 2;
         background-color: var(--brand-color);
