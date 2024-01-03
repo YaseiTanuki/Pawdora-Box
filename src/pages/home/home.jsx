@@ -189,12 +189,22 @@ const Home = () => {
                     <Blog img={blog3} title="Chuẩn bị nuôi thú cưng, cần chuẩn bị  những gì?" detail="Chuẩn bị nuôi thú cưng, sen cần chuẩn bị những món đồ gì?Nuôi thú cưng không hề đơ..."/>
                 </article>
                 <h3 className="memory-title">Khoảnh khắc</h3>
-                <section className="memory">
-                    <img src={mem1} alt="" />
-                    <img src={mem2} alt="" />
-                    <img src={mem3} alt="" />
-                    <img src={mem4} alt="" />
-                    <img src={mem5} alt="" />
+                <section className="memory-container">
+                    <section className="memory memory-marquee">
+                        <img className="mem1" src={mem1} alt="" />
+                        <img className="mem2" src={mem2} alt="" />
+                        <img className="mem3" src={mem3} alt="" />
+                        <img className="mem4" src={mem4} alt="" />
+                        <img src={mem5} alt="" />
+                    </section>
+
+                    <section className="memory2 memory-marquee">
+                        <img className="mem1" src={mem1} alt="" />
+                        <img className="mem2" src={mem2} alt="" />
+                        <img className="mem3" src={mem3} alt="" />
+                        <img className="mem4" src={mem4} alt="" />
+                        <img src={mem5} alt="" />
+                    </section>
                 </section>
             </main>
             <Footer/>

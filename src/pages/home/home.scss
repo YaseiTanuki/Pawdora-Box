@@ -159,17 +159,44 @@
         grid-row: 6 / 7;
     }
 
-    .memory {
+
+    .memory-container {
+
         grid-column: 2 / 12;
         grid-row: 7 / 8;
         display: flex;
-        justify-content: space-between;
+        gap: 500px;
+        overflow: hidden;
+        .memory {
 
-        img {
-            max-width: 500px;
+            animation: marquee 4s linear infinite;
+            white-space: nowrap;
+            display: flex;
+            gap: 30px;
+              
+              @keyframes marquee  {
+                0% {
+                  transform: translateX(36%);
+                }
+                100% {
+                  transform: translateX(-100%);
+                }
+              }
+            img {
+                max-width: 500px;
+            }
+        }
+
+        .memory2 {
+            display: flex;
+            gap: 30px;
+            animation: marquee 4s linear infinite;
+            white-space: nowrap;
         }
     }
+    
 }
+
 
 .card {
     border: 1px solid #ccc;
