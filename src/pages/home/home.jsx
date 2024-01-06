@@ -27,6 +27,9 @@ import mem3 from '../../assets/img/mem3.svg'
 import mem4 from '../../assets/img/mem4.svg'
 import mem5 from '../../assets/img/mem5.svg'
 import { productsData } from "../product_page/product_page"
+import CartContext from "../../../hooks/cart_context"
+import { useContext } from "react"
+
 
 const Home = () => {
     
@@ -40,14 +43,26 @@ const Home = () => {
     const sale2Products = productsData.slice(0, 7); // ID từ 1 đến 4
     const newProducts = productsData.slice(8, 15); // ID từ 9 đến 15
     const loveProducts = productsData.slice(15, 22); // ID từ 16 đến 22
+    const {cartProduct, setCartProduct} = useContext(CartContext)
+    
+    const addToCart = (productId) => {
+        var newCartProduct = cartProduct
+        newCartProduct.push(productId)
+        setCartProduct(newCartProduct)
+        // Thêm logic để xử lý thêm vào giỏ hàng
+        console.log(`Thêm sản phẩm có ID ${productId} vào giỏ hàng`);
+    }
+    
     const Card = (props) => {
+
+        let productId = props.id
         return (
             <article className="card">
                 <img src={props.img} alt="" />
                 <h4>{props.name}</h4>
                 <p>{props.price}</p>
                 <article className="button-list">
-                    <button className="add-to-cart">
+                    <button onClick={() => {addToCart(productId)}} className="add-to-cart">
                         <FontAwesomeIcon icon="cart-shopping"/>
                     </button>
                     <button className="buy">
@@ -141,7 +156,7 @@ const Home = () => {
                     )}</div>
                     <article className="sale2">
                         {sale2Products.slice(0, displayedSaleProducts).map((product, index) => (
-                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} />
+                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} id={product.id} />
                         ))}
                     </article>
                     
@@ -158,7 +173,7 @@ const Home = () => {
                     )}</div>
                     <article className="new">
                         {newProducts.slice(0, displayedNewProducts).map((product, index) => (
-                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} />
+                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} id={product.id} />
                         ))}
                     </article>
                     <div className="yt">
@@ -174,7 +189,7 @@ const Home = () => {
                     )}</div>
                     <article className="love">
                         {loveProducts.slice(0, displayedLoveProducts).map((product, index) => (
-                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} />
+                            <Card key={index} img={product.img} name={product.name} price={formatPrice(product.price)} id={product.id}/>
                         ))}
                     </article>
                    

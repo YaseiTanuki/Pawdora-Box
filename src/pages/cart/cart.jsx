@@ -16,7 +16,7 @@ const CartPage = () => {
 
 
     const {cartProduct, setCartProduct} = useContext(cartContext)
-
+    console.log(cartProduct[0])
     function removeProduct (id) {
         let removedList = cartList.filter(function(item) {
             return item.id !== id

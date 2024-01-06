@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom"
 
 const CartButton = () => {
     return (
-        <NavLink to="/cart" className="cart-button" activeClassName="active">
+        <NavLink to="/cart" className="cart-button">
             <FontAwesomeIcon icon="cart-shopping" />
         </NavLink>
     )
